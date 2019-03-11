@@ -1,4 +1,4 @@
-#BDImageTextEngine
+#ZBImageTextEngine
 
 ## 起因
 
@@ -24,18 +24,18 @@
 * space
 
 ```objective-c
-[self.label bd_makeContexts:^(BDImageTextMaker *make) {
+[self.label zb_makeContexts:^(ZBImageTextMaker *make) {
     make.space(4.0);
 }];
 
 config:
-label.attributedText = [BDImageTextEngine attributedStringFromData:@[@(4.0)]];
+label.attributedText = [ZBImageTextEngine attributedStringFromData:@[@(4.0)]];
 ```
 
 * image
 
 ```objective-c
-[self.label bd_makeContexts:^(BDImageTextMaker *make) {
+[self.label zb_makeContexts:^(ZBImageTextMaker *make) {
     //默认
     make.image([UIImage imageNamed:@"jianada_28x28"]);
     make.space(4.0);
@@ -46,7 +46,7 @@ label.attributedText = [BDImageTextEngine attributedStringFromData:@[@(4.0)]];
     make.image([UIImage imageNamed:@"img_empty"]).width(14).height(14).url(@"http://b0.hucdn.com/img/country_new/ct_18.png");
     make.space(4.0);
     //有边框样式
-    make.image([UIImage imageNamed:@"jianada_28x28"]).width(11).height(11).border([BDimageTextItemBorder borderWithColor:[UIColor blueColor] width:1 radius:5.5]).offset(-2);
+    make.image([UIImage imageNamed:@"jianada_28x28"]).width(11).height(11).border([ZBimageTextItemBorder borderWithColor:[UIColor blueColor] width:1 radius:5.5]).offset(-2);
 }];
 ```
 ![image01.png](https://upload-images.jianshu.io/upload_images/1986326-ba1803638fb4b513.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/320)
@@ -56,7 +56,7 @@ label.attributedText = [BDImageTextEngine attributedStringFromData:@[@(4.0)]];
 
 
 ```objective-c
-[self.label bd_makeContexts:^(BDImageTextMaker *make) {
+[self.label zb_makeContexts:^(ZBImageTextMaker *make) {
     
     //默认
     make.text(@"优惠券");
@@ -79,7 +79,7 @@ label.attributedText = [BDImageTextEngine attributedStringFromData:@[@(4.0)]];
     .color([UIColor redColor])
     .baselineFont([UIFont systemFontOfSize:16])
     .offset(0.6)
-    .bg([BDimageTextItemBackground bgWithImage:[UIImage imageNamed:@"bg01"] margin:UIEdgeInsetsMake(2, 5, 2, 5)]);
+    .bg([ZBImageTextItemBackground bgWithImage:[UIImage imageNamed:@"bg01"] margin:UIEdgeInsetsMake(2, 5, 2, 5)]);
     
     make.space(4.0);
     
@@ -89,7 +89,7 @@ label.attributedText = [BDImageTextEngine attributedStringFromData:@[@(4.0)]];
     .color([UIColor redColor])
     .baselineFont([UIFont systemFontOfSize:16])
     .color([UIColor redColor])
-    .border([BDimageTextItemBorder borderWithColor:[UIColor redColor] width:0.5 radius:2 margin:UIEdgeInsetsMake(2, 3, 2, 3)]);
+    .border([ZBImageTextItemBorder borderWithColor:[UIColor redColor] width:0.5 radius:2 margin:UIEdgeInsetsMake(2, 3, 2, 3)]);
 }];
 ```
 ![text01.png](https://upload-images.jianshu.io/upload_images/1986326-230072f0c32c43cf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/320)
@@ -102,7 +102,7 @@ make.text(@"优惠券").offset(10);
 ```
 ###### 2. 如何用dict写
 ```objective-c
-label.attributedText = [BDImageTextEngine attributedStringFromData:[self templates]];
+label.attributedText = [ZBImageTextEngine attributedStringFromData:[self templates]];
 
 - (NSArray *)templates
 {
@@ -142,7 +142,7 @@ label.attributedText = [BDImageTextEngine attributedStringFromData:[self templat
 
 ## Installation
 
-#### Podfile
+####  
 ```
 platform :ios, '8.0'
 
