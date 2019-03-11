@@ -9,6 +9,7 @@
 #import "ZBImageTextEngine.h"
 #import <YYText/YYText.h>
 #import <SDWebImage/SDWebImageManager.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 
 #ifdef DEBUG
 #define kStartTime CFAbsoluteTime startTime = CFAbsoluteTimeGetCurrent();
@@ -24,10 +25,6 @@
 
 @property (nonatomic, assign) CGSize size;
 
-//TODO: 用于开发优先级
-//@property (nonatomic, assign) NSInteger priority;
-//@property (nonatomic, assign) NSUInteger index;
-
 @end
 
 @implementation ZBImageTextItem
@@ -40,7 +37,6 @@
 
 @implementation ZBImageTextEngine
 
-//TODO: 外部可增加template
 + (NSArray<NSString *> *)templates
 {
     return @[@"text", @"image", @"space"];
@@ -74,53 +70,7 @@
 }
 
 #pragma mark - prive
-/*
- #pragma mark  优先级
- + (NSAttributedString *)resultAttributedStringWithItems:(NSArray *)items
- {
- //需要外部传入config,label固定宽;限制1行;
- NSMutableAttributedString *atr = [[NSMutableAttributedString alloc] init];
- 
- NSMutableArray *highArray = @[].mutableCopy;
- NSMutableArray *defaultArray = @[].mutableCopy;
- NSMutableArray *lowArray = @[].mutableCopy;
- 
- for (NSDictionary *itemData in items) {
- NSInteger priority = itemData[@"priority"] ? [itemData[@"priority"] integerValue] : 0;
- if (priority > 0) {
- [highArray addObject:itemData];
- } else if (priority < 0) {
- [lowArray addObject:itemData];
- } else {
- [defaultArray addObject:itemData];
- }
- }
- 
- //1.high 符合条件判断
- 
- //2.default 符合条件判断
- 
- //3.low 符合条件判断
- 
- //4.拼接
- 
- return [atr copy];
- }
- 
- + (ZBImageTextItem *)itemFormItemData:(NSDictionary *)data
- {
- if ([data[@"template"] isEqualToString:@"space"]) {
- return [self spaceTemplateWithData:data];
- }
- if ([data[@"template"] isEqualToString:@"image"]) {
- return [self imageTemplateWithData:data];
- }
- if ([data[@"template"] isEqualToString:@"text"]) {
- return [self textTemplateWithData:data];
- }
- return nil;
- }
- */
+
 + (NSString *)templateNameForData:(NSDictionary *)itemData
 {
     if (!itemData) {
@@ -204,18 +154,7 @@
             imageURL = data[@"url"];
         }
     }
-    /*
-     //TODO: 已经有缓存的图片,直接用缓存图片;
-     if (imageURL) {
-     NSString *key = [[SDWebImageManager sharedManager] cacheKeyForURL:imageURL];
-     UIImage *image = [[SDWebImageManager sharedManager].imageCache imageFromCacheForKey:key];
-     if (image) {
-     NSMutableDictionary *tmpData = data.mutableCopy;
-     tmpData[@"image"] = image;
-     data = tmpData.copy;
-     }
-     }
-     */
+
     UIImage *image = data[@"image"];
     
     if (![image isKindOfClass:[UIImage class]] || CGSizeEqualToSize(image.size, CGSizeZero)) {
@@ -242,36 +181,32 @@
     CALayer *containerLayer = [CALayer layer];
     containerLayer.frame = CGRectMake(0, 0, containerSize.width, containerSize.height);
     {
-        __block CALayer *imageLayer = [CALayer layer];
-        [containerLayer addSublayer:imageLayer];
-        imageLayer.contents = (id)image.CGImage;
-        imageLayer.frame = CGRectMake(0, offset, containerSize.width, containerSize.height);
-        
+        UIImageView *imageV = [[UIImageView alloc] initWithFrame:CGRectMake(0, offset, containerSize.width, containerSize.height)];      
+        if (imageURL) {
+            [imageV sd_setImageWithURL:imageURL placeholderImage:image completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+                CALayer *superLayer = containerLayer.superlayer;
+                if (superLayer && [superLayer.delegate isKindOfClass:[YYLabel class]]) {
+                    imageV.layer.contents = (id)image.CGImage;
+                    YYLabel *label = (YYLabel *)superLayer.delegate;
+                    [label setNeedsLayout];
+                }
+            }];
+        } else {
+              imageV.image = image;
+        }
         if (border) {
             UIColor *color = border[@"color"] ? border[@"color"] : [UIColor blackColor];
             CGFloat width = border[@"width"] ? [border[@"width"] floatValue] : 0.5;
             CGFloat radius = [border[@"radius"] floatValue];
             if (width > 0) {
-                imageLayer.borderColor = color.CGColor;
-                imageLayer.borderWidth = width;
+                imageV.layer.borderColor = color.CGColor;
+                imageV.layer.borderWidth = width;
             }
             if (radius > 0) {
-                imageLayer.cornerRadius = radius;
+                imageV.layer.cornerRadius = radius;
             }
         }
-        if (imageURL) {
-            //TODO: 考虑代理出去,根据不同product配置;
-            [[[SDWebImageManager sharedManager] imageDownloader] downloadImageWithURL:imageURL options:SDWebImageDownloaderUseNSURLCache progress:nil completed:^(UIImage *_Nullable image, NSData *_Nullable data, NSError *_Nullable error, BOOL finished) {
-                if (image) {
-                    CALayer *superLayer = containerLayer.superlayer;
-                    if (superLayer && [superLayer.delegate isKindOfClass:[YYLabel class]]) {
-                        imageLayer.contents = (id)image.CGImage;
-                        YYLabel *label = (YYLabel *)superLayer.delegate;
-                        [label setNeedsLayout];
-                    }
-                }
-            }];
-        }
+        [containerLayer addSublayer:imageV.layer];
     }
     
     NSMutableAttributedString *atr = [[NSMutableAttributedString alloc] initWithString:YYTextAttachmentToken];
@@ -406,25 +341,11 @@
         //垂直居中: 先底部对齐,再便宜字体高度的一半;
         CGFloat interval = (baselineFont.descender - font.descender) + (baselineFont.lineHeight - font.lineHeight) / 2;
         
-        //方案1:
         for (CALayer *subLayer in containerLayer.sublayers) {
             CGRect subLayerFrame = subLayer.frame;
             subLayerFrame.origin.y -= interval;
             subLayer.frame = subLayerFrame;
         }
-        //方案2:
-        /*
-         NSString *version = [UIDevice currentDevice].systemVersion;
-         if (version.doubleValue >= 9.0) {
-         atr.yy_baselineOffset = @(interval);
-         } else {
-         for (CALayer *subLayer in containerLayer.sublayers) {
-         CGRect subLayerFrame = subLayer.frame;
-         subLayerFrame.origin.y -= interval;
-         subLayer.frame = subLayerFrame;
-         }
-         }
-         */
     }
     
     YYTextAttachment *attach = [YYTextAttachment new];

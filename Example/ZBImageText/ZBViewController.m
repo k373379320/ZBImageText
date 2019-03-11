@@ -106,6 +106,7 @@
 {
     if (!_label) {
         _label = [[YYLabel alloc] init];
+        _label.backgroundColor = [UIColor whiteColor];
     }
     return _label;
 }
