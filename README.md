@@ -145,8 +145,6 @@ label.attributedText = [BDImageTextEngine attributedStringFromData:[self templat
 #### Podfile
 ```
 platform :ios, '8.0'
-pod 'YYText'
-pod 'BlocksKit'
-pod 'Masonry'
+
 pod 'ZBImageText'
 ```
