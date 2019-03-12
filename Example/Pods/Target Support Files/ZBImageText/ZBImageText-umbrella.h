@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "NSDictionary+ZBImageTextSafe.h"
 #import "YYLabel+ZBImageTextAdditions.h"
 #import "ZBImageText.h"
 #import "ZBImageTextEngine.h"

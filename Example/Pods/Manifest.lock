@@ -19,9 +19,7 @@ PODS:
     - SDWebImage/Core (= 4.4.6)
   - SDWebImage/Core (4.4.6)
   - YYText (1.0.7)
-  - ZBImageText (0.0.1):
-    - BlocksKit
-    - Masonry
+  - ZBImageText (0.0.4):
     - SDWebImage
     - YYText
 
@@ -41,7 +39,7 @@ SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
-  ZBImageText: af292a950a0ec25ee4ce5de959a468bd5897ed73
+  ZBImageText: 718dbb1e9f97d1e492b54f6a2e8d64d4ac781c37
 
 PODFILE CHECKSUM: d30d65a639436383cd4da84ebaeccc264dc21341
 

@@ -1,6 +1,6 @@
 {
   "name": "ZBImageText",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "summary": "A delightful iOS Uitilty framework.",
   "homepage": "https://github.com/k373379320/ZBImageText",
   "license": {
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/k373379320/ZBImageText.git",
-    "tag": "0.0.1"
+    "tag": "0.0.4"
   },
   "platforms": {
     "ios": "8.0"
@@ -21,12 +21,6 @@
   "ios": {
     "dependencies": {
       "YYText": [
-
-      ],
-      "BlocksKit": [
-
-      ],
-      "Masonry": [
 
       ],
       "SDWebImage": [
