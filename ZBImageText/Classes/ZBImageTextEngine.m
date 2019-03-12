@@ -8,8 +8,8 @@
 
 #import "ZBImageTextEngine.h"
 #import <YYText/YYText.h>
-#import <SDWebImage/SDWebImageManager.h>
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "NSDictionary+ZBImageTextSafe.h"
 
 #ifdef DEBUG
 #define kStartTime //CFAbsoluteTime startTime = CFAbsoluteTimeGetCurrent();
@@ -127,7 +127,7 @@
 #pragma mark - template
 + (ZBImageTextItem *)spaceTemplateWithData:(NSDictionary *)data
 {
-    CGFloat space = [data[@"space"] floatValue];
+    CGFloat space = [data zb_safeFloatValueForKey:@"space" defaultValue:0];
     if (space <= 0) {
         return nil;
     }
@@ -146,44 +146,26 @@
 
 + (ZBImageTextItem *)imageTemplateWithData:(NSDictionary *)data
 {
-    NSURL *imageURL = nil;
-    if (data[@"url"]) {
-        if ([data[@"url"] isKindOfClass:[NSString  class]]) {
-            imageURL = [NSURL URLWithString:data[@"url"]];
-        } else if ([data[@"url"] isKindOfClass:[NSURL  class]]) {
-            imageURL = data[@"url"];
-        }
-    }
-
+    NSURL *imageURL = imageURL = [NSURL URLWithString:[data zb_safeStringValueForKey:@"url" defaultValue:@""]];
     UIImage *image = data[@"image"];
     
     if (![image isKindOfClass:[UIImage class]] || CGSizeEqualToSize(image.size, CGSizeZero)) {
         return nil;
     }
     
-    CGFloat width = data[@"height"] ? [data[@"width"] floatValue] : image.size.width;
-    CGFloat height = data[@"height"] ? [data[@"height"] floatValue] : image.size.width;
-    
-    //边框
-    NSDictionary *border;
-    if (data[@"border"] && [data[@"border"] isKindOfClass:[NSDictionary class]]) {
-        border = data[@"border"];
-    }
-    
-    //垂直偏移
-    CGFloat offset = 0;
-    if (data[@"offset"]) {
-        offset = [data[@"offset"] floatValue];
-    }
+    CGFloat width = [data zb_safeFloatValueForKey:@"width" defaultValue:image.size.width];
+    CGFloat height = [data zb_safeFloatValueForKey:@"height" defaultValue:image.size.height];
+    NSDictionary *border = [data zb_safeDictionaryValueForKey:@"border" defaultValue:nil];
+    CGFloat offset = [data zb_safeFloatValueForKey:@"offset" defaultValue:0];
     
     CGSize containerSize = CGSizeMake(width, height);
     
     CALayer *containerLayer = [CALayer layer];
     containerLayer.frame = CGRectMake(0, 0, containerSize.width, containerSize.height);
     {
-        UIImageView *imageV = [[UIImageView alloc] initWithFrame:CGRectMake(0, offset, containerSize.width, containerSize.height)];      
+        UIImageView *imageV = [[UIImageView alloc] initWithFrame:CGRectMake(0, offset, containerSize.width, containerSize.height)];
         if (imageURL) {
-            [imageV sd_setImageWithURL:imageURL placeholderImage:image completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+            [imageV sd_setImageWithURL:imageURL placeholderImage:image completed:^(UIImage *_Nullable image, NSError *_Nullable error, SDImageCacheType cacheType, NSURL *_Nullable imageURL) {
                 CALayer *superLayer = containerLayer.superlayer;
                 if (superLayer && [superLayer.delegate isKindOfClass:[YYLabel class]]) {
                     imageV.layer.contents = (id)image.CGImage;
@@ -192,12 +174,12 @@
                 }
             }];
         } else {
-              imageV.image = image;
+            imageV.image = image;
         }
         if (border) {
             UIColor *color = border[@"color"] ? border[@"color"] : [UIColor blackColor];
-            CGFloat width = border[@"width"] ? [border[@"width"] floatValue] : 0.5;
-            CGFloat radius = [border[@"radius"] floatValue];
+            CGFloat width = [border zb_safeFloatValueForKey:@"width" defaultValue:0.5];
+            CGFloat radius = [border zb_safeFloatValueForKey:@"radius" defaultValue:0];
             if (width > 0) {
                 imageV.layer.borderColor = color.CGColor;
                 imageV.layer.borderWidth = width;
@@ -233,52 +215,38 @@
 
 + (ZBImageTextItem *)textTemplateWithData:(NSDictionary *)data
 {
-    NSString *text = data[@"text"];
-    if (![text isKindOfClass:[NSString class]] || text.length <= 0) {
+    NSString *text = [data zb_safeStringValueForKey:@"text" defaultValue:@""];
+    if (text.length <= 0) {
         return nil;
     }
     UIFont *font = data[@"font"] ? data[@"font"] : [UIFont systemFontOfSize:15];
     UIColor *color =  data[@"color"] ? data[@"color"] : [UIColor blackColor];
     
     //对齐
-    UIFont *baselineFont = nil;
-    if (data[@"baselineFont"]) {
-        baselineFont = data[@"baselineFont"];
-    }
+    UIFont *baselineFont = data[@"baselineFont"] ? data[@"baselineFont"] : nil;
     //边框
-    UIEdgeInsets borderMargin = UIEdgeInsetsZero;
+    UIEdgeInsets borderMargin;
     UIColor *borderColor = [UIColor blackColor];
     CGFloat borderWidth = 0.5f;
     CGFloat borderRadius = 0;
-    if (data[@"border"] && [data[@"border"] isKindOfClass:[NSDictionary class]]) {
-        NSDictionary *border = data[@"border"];
-        if (border[@"margin"]) {
-            borderMargin = [border[@"margin"] UIEdgeInsetsValue];
-        }
+    NSDictionary *border = [data zb_safeDictionaryValueForKey:@"border" defaultValue:nil];
+    if (border) {
+        borderMargin = border[@"margin"] ? [border[@"margin"] UIEdgeInsetsValue] : UIEdgeInsetsZero;
         borderColor = border[@"color"] ? border[@"color"] : [UIColor blackColor];
-        borderWidth = border[@"width"] ? [border[@"width"] floatValue] : 0.5;
-        borderRadius = [border[@"radius"] floatValue];
+        borderWidth = [border zb_safeFloatValueForKey:@"width" defaultValue:0.5];
+        borderRadius = [border zb_safeFloatValueForKey:@"radius" defaultValue:0.5];
     }
     
     //垂直偏移
-    CGFloat offset = 0;
-    if (data[@"offset"]) {
-        offset = [data[@"offset"] floatValue];
-    }
-    //bg
-    UIImage *bgImage = nil;
-    BOOL bgImageStretchable = YES;
+    CGFloat offset = [data zb_safeFloatValueForKey:@"offset" defaultValue:0];
     
-    if (data[@"bg"] && [data[@"bg"] isKindOfClass:[NSDictionary class]]) {
-        NSDictionary *bg = data[@"bg"];
-        if (bg[@"image"]) {
-            bgImage = bg[@"image"];
-            if (bg[@"margin"]) {
-                borderMargin = [bg[@"margin"] UIEdgeInsetsValue];
-            }
-        }
-        if (bg[@"stretchable"]) {
-            bgImageStretchable = [bg[@"stretchable"] boolValue];
+    //bg
+    NSDictionary *bg = [data zb_safeDictionaryValueForKey:@"bg" defaultValue:nil];
+    BOOL bgImageStretchable = [bg zb_safeBoolValueForKey:@"stretchable" defaultValue:YES];
+    UIImage *bgImage = bg[@"image"] ? bg[@"image"] : nil;
+    if (bgImage) {
+        if (bg[@"margin"]) {
+            borderMargin = [bg[@"margin"] UIEdgeInsetsValue];
         }
     }
     
@@ -291,7 +259,7 @@
     CALayer *containerLayer = [CALayer layer];
     containerLayer.frame = CGRectMake(0, 0, containerSize.width, containerSize.height);
     
-    if (data[@"border"] && [data[@"border"] isKindOfClass:[NSDictionary class]]) {
+    if (border) {
         //不能直接在containerLayer 上绘制,会导致offset无法实现;
         CALayer *borderLayer = [CALayer layer];
         
@@ -338,7 +306,7 @@
     NSMutableAttributedString *atr = [[NSMutableAttributedString alloc] initWithString:YYTextAttachmentToken];
     
     if (baselineFont) {
-        //垂直居中: 先底部对齐,再便宜字体高度的一半;
+        //垂直居中: 先底部对齐,再偏移字体高度的一半;
         CGFloat interval = (baselineFont.descender - font.descender) + (baselineFont.lineHeight - font.lineHeight) / 2;
         
         for (CALayer *subLayer in containerLayer.sublayers) {

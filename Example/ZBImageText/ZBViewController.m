@@ -44,7 +44,7 @@
 
 - (void)makeImageText
 {
-    [self.label zb_makeContexts^(ZBImageTextMaker *make) {
+    [self.label zb_makeContexts:^(ZBImageTextMaker *make) {
         make.space(4.0);
         
         //默认
