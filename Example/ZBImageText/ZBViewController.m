@@ -51,7 +51,11 @@
         make.image([UIImage imageNamed:@"Canada_28"]);
         make.space(4.0);
         //指定宽高
-        make.image([UIImage imageNamed:@"img_empty"]).width(14).height(14);
+        ZBImageTextBlock imgEmptyBlock = ^(UIImageView *imageView) {
+            NSLog(@"%@",imageView);
+        };
+        
+        make.image([UIImage imageNamed:@"img_empty"]).width(14).height(14).config(@{ @"imageView" :imgEmptyBlock});
         make.space(4.0);
         //web图
         make.image([UIImage imageNamed:@"img_empty"]).width(14).height(14).url(@"http://b0.hucdn.com/img/country_new/ct_18.png");

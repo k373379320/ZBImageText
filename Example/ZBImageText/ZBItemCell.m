@@ -9,8 +9,6 @@
 #import "ZBItemCell.h"
 #import <ZBImageText/YYLabel+ZBImageTextAdditions.h>
 @implementation ZBItemCell
-
-
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -19,24 +17,25 @@
         self.contentView.layer.borderColor = [UIColor blackColor].CGColor;
         self.contentView.layer.borderWidth = 0.5f;
         self.label.numberOfLines = 0;
-//        self.label.displaysAsynchronously = YES;
-    
+    }    
     return self;
 }
-
 - (void)layoutSubviews
 {
     [super layoutSubviews];
     self.label.frame = CGRectMake(0, 0, CGRectGetWidth(self.contentView.frame), CGRectGetHeight(self.contentView.frame));
 }
+
 - (void)loadData:(id)data
 {
     self.label.attributedText = data[@"attributedString"];
 }
+
 + (CGSize)itemSize:(id)data
 {
     return CGSizeMake(CGRectGetWidth([UIScreen mainScreen].bounds),100);
 }
+
 - (YYLabel *)label
 {
     if (!_label) {
@@ -45,5 +44,7 @@
     }
     return _label;
 }
+
+
 
 @end

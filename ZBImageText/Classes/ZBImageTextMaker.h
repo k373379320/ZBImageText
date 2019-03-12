@@ -10,6 +10,8 @@
 #import <UIKit/UIKit.h>
 #import "ZBImageText.h"
 
+typedef void(^ZBImageTextBlock)(id obj);
+
 @interface ZBImageTextMaker : NSObject
 
 - (void (^)(CGFloat))space;

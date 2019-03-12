@@ -37,16 +37,20 @@ label.attributedText = [ZBImageTextEngine attributedStringFromData:@[@(4.0)]];
 ```objective-c
 [self.label zb_makeContexts:^(ZBImageTextMaker *make) {
     //默认
-    make.image([UIImage imageNamed:@"jianada_28x28"]);
+    make.image([UIImage imageNamed:@"Canada_28"]);
     make.space(4.0);
     //指定宽高
-    make.image([UIImage imageNamed:@"img_empty"]).width(14).height(14);
+    ZBImageTextBlock imgEmptyBlock = ^(UIImageView *imageView) {
+    NSLog(@"%@",imageView);
+    };
+    
+    make.image([UIImage imageNamed:@"img_empty"]).width(14).height(14).config(@{ @"imageView" :imgEmptyBlock});
     make.space(4.0);
     //web图
     make.image([UIImage imageNamed:@"img_empty"]).width(14).height(14).url(@"http://b0.hucdn.com/img/country_new/ct_18.png");
     make.space(4.0);
     //有边框样式
-    make.image([UIImage imageNamed:@"jianada_28x28"]).width(11).height(11).border([ZBimageTextItemBorder borderWithColor:[UIColor blueColor] width:1 radius:5.5]).offset(-2);
+    make.image([UIImage imageNamed:@"Netherlands_28"]).width(11).height(11).border([ZBImageTextItemBorder borderWithColor:[UIColor blueColor] width:1 radius:5.5]).offset(-2);
 }];
 ```
 ![image01.png](https://upload-images.jianshu.io/upload_images/1986326-ba1803638fb4b513.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/320)
@@ -138,6 +142,32 @@ label.attributedText = [ZBImageTextEngine attributedStringFromData:[self templat
                            }
                    }];
 }
+```
+###### 3.hook
+使用block
+```objective-c
+
+typedef void(^ZBImageTextBlock)(id obj);
+```
+
+example:
+
+- ZBImageTextItem
+```objective-c
+//ZBImageTextBlock imageViewBlock = data[@"imageView"] ? : nil;
+//ZBImageTextBlock itemBlock = data[@"item"] ? : nil;
+
+make.image([UIImage imageNamed:@"img_empty"]).width(14).height(14).config(@{ @"imageView" :^(UIImageView *imageView) {
+NSLog(@"%@",imageView);
+}});
+
+```
+- ZBImageTextItem
+
+```objective-c
+//ZBImageTextBlock imageViewBlock = data[@"imageView"] ? : nil;
+//ZBImageTextBlock itemBlock = data[@"item"] ? : nil;
+//ZBImageTextBlock textLayerBlock = data[@"textLayer"] ? : nil;
 ```
 
 ## Installation

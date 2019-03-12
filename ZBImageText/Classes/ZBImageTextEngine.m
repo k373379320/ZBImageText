@@ -11,6 +11,8 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "NSDictionary+ZBImageTextSafe.h"
 
+typedef void(^ZBImageTextBlock)(id obj);
+
 #ifdef DEBUG
 #define kStartTime //CFAbsoluteTime startTime = CFAbsoluteTimeGetCurrent();
 #define kEnd(__log__) //CFAbsoluteTime linkTime = (CFAbsoluteTimeGetCurrent() - startTime); NSLog(@"📝--%@-->  %f ms", __log__, linkTime * 1000.0);
@@ -152,6 +154,10 @@
     if (![image isKindOfClass:[UIImage class]] || CGSizeEqualToSize(image.size, CGSizeZero)) {
         return nil;
     }
+    //hook
+    ZBImageTextBlock imageViewBlock = data[@"imageView"] ? : nil;
+    ZBImageTextBlock itemBlock = data[@"item"] ? : nil;
+    ZBImageTextBlock downloadImageBlock = data[@"download"] ? : nil;
     
     CGFloat width = [data zb_safeFloatValueForKey:@"width" defaultValue:image.size.width];
     CGFloat height = [data zb_safeFloatValueForKey:@"height" defaultValue:image.size.height];
@@ -165,14 +171,22 @@
     {
         UIImageView *imageV = [[UIImageView alloc] initWithFrame:CGRectMake(0, offset, containerSize.width, containerSize.height)];
         if (imageURL) {
-            [imageV sd_setImageWithURL:imageURL placeholderImage:image completed:^(UIImage *_Nullable image, NSError *_Nullable error, SDImageCacheType cacheType, NSURL *_Nullable imageURL) {
-                CALayer *superLayer = containerLayer.superlayer;
-                if (superLayer && [superLayer.delegate isKindOfClass:[YYLabel class]]) {
-                    imageV.layer.contents = (id)image.CGImage;
-                    YYLabel *label = (YYLabel *)superLayer.delegate;
-                    [label setNeedsLayout];
-                }
-            }];
+            if (downloadImageBlock) {
+                downloadImageBlock(@{
+                                     @"imageView" : imageV,
+                                     @"URL" : imageURL,
+                                     @"placeholderImage"  : image,
+                                     });
+            } else {
+                [imageV sd_setImageWithURL:imageURL placeholderImage:image completed:^(UIImage *_Nullable image, NSError *_Nullable error, SDImageCacheType cacheType, NSURL *_Nullable imageURL) {
+                    CALayer *superLayer = containerLayer.superlayer;
+                    if (superLayer && [superLayer.delegate isKindOfClass:[YYLabel class]]) {
+                        imageV.layer.contents = (id)image.CGImage;
+                        YYLabel *label = (YYLabel *)superLayer.delegate;
+                        [label setNeedsLayout];
+                    }
+                }];
+            }           
         } else {
             imageV.image = image;
         }
@@ -188,9 +202,12 @@
                 imageV.layer.cornerRadius = radius;
             }
         }
+        if (imageViewBlock) {
+            imageViewBlock(imageV);
+        }
         [containerLayer addSublayer:imageV.layer];
     }
-
+    
     NSMutableAttributedString *atr = [[NSMutableAttributedString alloc] initWithString:YYTextAttachmentToken];
     
     YYTextAttachment *attach = [YYTextAttachment new];
@@ -210,11 +227,15 @@
     ZBImageTextItem *item = [[ZBImageTextItem alloc] init];
     item.attributedString = [atr copy];
     item.size = containerSize;
+    if (itemBlock) {
+        itemBlock(item);
+    }
     return item;
 }
 
 + (ZBImageTextItem *)textTemplateWithData:(NSDictionary *)data
 {
+    
     NSString *text = [data zb_safeStringValueForKey:@"text" defaultValue:@""];
     if (text.length <= 0) {
         return nil;
@@ -249,6 +270,11 @@
             borderMargin = [bg[@"margin"] UIEdgeInsetsValue];
         }
     }
+    //hook
+    ZBImageTextBlock imageViewBlock = data[@"imageView"] ? : nil;
+    ZBImageTextBlock itemBlock = data[@"item"] ? : nil;
+    ZBImageTextBlock textLayerBlock = data[@"textLayer"] ? : nil;
+    
     
     CGSize containerSize = [text sizeWithAttributes:@{
                                                       NSFontAttributeName : font
@@ -280,6 +306,9 @@
         //CALayer实现不了stretchable
         UIImageView *imageV = [[UIImageView alloc] initWithFrame:CGRectMake(0, offset, containerSize.width, containerSize.height)];
         imageV.image = bgImage;
+        if (imageViewBlock) {
+            imageViewBlock(imageV);
+        }
         [containerLayer addSublayer:imageV.layer];
     }
     {
@@ -289,7 +318,7 @@
         textAttributedString.yy_lineSpacing = 0;
         
         CATextLayer *textLayer = [CATextLayer layer];
-        textLayer.string = [textAttributedString copy];
+        textLayer.string = (id)[textAttributedString copy];
         //如果不设置这个,字数太多"..."颜色不对
         textLayer.foregroundColor = color.CGColor;
         textLayer.fontSize = font.pointSize;
@@ -299,7 +328,9 @@
         textLayer.truncationMode = kCATruncationEnd;
         textLayer.alignmentMode = kCAAlignmentCenter;
         textLayer.frame = CGRectMake(borderMargin.left, borderMargin.top + offset, containerSize.width - (borderMargin.left + borderMargin.right), containerSize.height - (borderMargin.top + borderMargin.bottom));
-        
+        if (textLayerBlock) {
+            textLayerBlock(textLayer);
+        }
         [containerLayer addSublayer:textLayer];
     }
     
@@ -340,6 +371,9 @@
     ZBImageTextItem *item = [[ZBImageTextItem alloc] init];
     item.attributedString = [atr copy];
     item.size = containerSize;
+    if (itemBlock) {
+        itemBlock(item);
+    }
     return item;
 }
 
