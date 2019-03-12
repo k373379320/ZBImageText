@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1489EB7C37105FEC3A216743 /* Pods_ZBImageText_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F61870B241F5150941C74C19 /* Pods_ZBImageText_Example.framework */; };
+		306D95B6223783C200341EE8 /* ZBListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 306D95B5223783C200341EE8 /* ZBListViewController.m */; };
+		306D95B9223784FB00341EE8 /* ZBItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 306D95B8223784FB00341EE8 /* ZBItemCell.m */; };
+		306D95BC2237896400341EE8 /* ZBFpsTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 306D95BB2237896400341EE8 /* ZBFpsTool.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -38,6 +41,12 @@
 /* Begin PBXFileReference section */
 		0509549F4185AE189CD0F63D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		0D61DB252FE9D49BF6154C0B /* ZBImageText.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ZBImageText.podspec; path = ../ZBImageText.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		306D95B4223783C200341EE8 /* ZBListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBListViewController.h; sourceTree = "<group>"; };
+		306D95B5223783C200341EE8 /* ZBListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBListViewController.m; sourceTree = "<group>"; };
+		306D95B7223784FB00341EE8 /* ZBItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBItemCell.h; sourceTree = "<group>"; };
+		306D95B8223784FB00341EE8 /* ZBItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBItemCell.m; sourceTree = "<group>"; };
+		306D95BA2237896400341EE8 /* ZBFpsTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBFpsTool.h; sourceTree = "<group>"; };
+		306D95BB2237896400341EE8 /* ZBFpsTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBFpsTool.m; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* ZBImageText_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZBImageText_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -137,11 +146,17 @@
 		6003F593195388D20070C39A /* Example for ZBImageText */ = {
 			isa = PBXGroup;
 			children = (
+				306D95BA2237896400341EE8 /* ZBFpsTool.h */,
+				306D95BB2237896400341EE8 /* ZBFpsTool.m */,
+				306D95B7223784FB00341EE8 /* ZBItemCell.h */,
+				306D95B8223784FB00341EE8 /* ZBItemCell.m */,
 				6003F59C195388D20070C39A /* ZBAppDelegate.h */,
 				6003F59D195388D20070C39A /* ZBAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* ZBViewController.h */,
 				6003F5A6195388D20070C39A /* ZBViewController.m */,
+				306D95B4223783C200341EE8 /* ZBListViewController.h */,
+				306D95B5223783C200341EE8 /* ZBListViewController.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -301,9 +316,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ZBImageText_Example/Pods-ZBImageText_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BlocksKit/BlocksKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework",
+				"${BUILT_PRODUCTS_DIR}/MLeaksFinder/MLeaksFinder.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/YYText/YYText.framework",
+				"${BUILT_PRODUCTS_DIR}/ZBFancyCollectionView/ZBFancyCollectionView.framework",
 				"${BUILT_PRODUCTS_DIR}/ZBImageText/ZBImageText.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -311,9 +329,12 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BlocksKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBRetainCycleDetector.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MLeaksFinder.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYText.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZBFancyCollectionView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZBImageText.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,8 +390,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				306D95B6223783C200341EE8 /* ZBListViewController.m in Sources */,
+				306D95BC2237896400341EE8 /* ZBFpsTool.m in Sources */,
 				6003F59E195388D20070C39A /* ZBAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* ZBViewController.m in Sources */,
+				306D95B9223784FB00341EE8 /* ZBItemCell.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,4 +14,6 @@
 
 - (void)zb_makeContexts:(void(NS_NOESCAPE ^)(ZBImageTextMaker *make))block;
 
++ (NSAttributedString *)zb_attributedStringWithContexts:(void(NS_NOESCAPE ^)(ZBImageTextMaker *make))block;
+
 @end

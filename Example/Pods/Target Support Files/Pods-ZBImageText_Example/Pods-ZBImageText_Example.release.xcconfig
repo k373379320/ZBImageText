@@ -1,8 +1,8 @@
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/BlocksKit" "${PODS_CONFIGURATION_BUILD_DIR}/Masonry" "${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage" "${PODS_CONFIGURATION_BUILD_DIR}/YYText" "${PODS_CONFIGURATION_BUILD_DIR}/ZBImageText"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/BlocksKit" "${PODS_CONFIGURATION_BUILD_DIR}/FBRetainCycleDetector" "${PODS_CONFIGURATION_BUILD_DIR}/Masonry" "${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage" "${PODS_CONFIGURATION_BUILD_DIR}/YYText" "${PODS_CONFIGURATION_BUILD_DIR}/ZBFancyCollectionView" "${PODS_CONFIGURATION_BUILD_DIR}/ZBImageText"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/BlocksKit/BlocksKit.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/Masonry/Masonry.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage/SDWebImage.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/YYText/YYText.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/ZBImageText/ZBImageText.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -framework "BlocksKit" -framework "Masonry" -framework "SDWebImage" -framework "YYText" -framework "ZBImageText"
+OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/BlocksKit/BlocksKit.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/Masonry/Masonry.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage/SDWebImage.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/YYText/YYText.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/ZBFancyCollectionView/ZBFancyCollectionView.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/ZBImageText/ZBImageText.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -framework "BlocksKit" -framework "FBRetainCycleDetector" -framework "Masonry" -framework "SDWebImage" -framework "YYText" -framework "ZBFancyCollectionView" -framework "ZBImageText"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.

@@ -10,5 +10,6 @@ target 'ZBImageText_Example' do
   pod 'BlocksKit'
   pod 'Masonry'
   pod 'SDWebImage'
-  
+  pod 'MLeaksFinder',   :configurations => ['Debug']
+  pod 'ZBFancyCollectionView'
 end

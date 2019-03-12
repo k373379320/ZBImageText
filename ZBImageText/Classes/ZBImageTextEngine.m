@@ -190,7 +190,7 @@
         }
         [containerLayer addSublayer:imageV.layer];
     }
-    
+
     NSMutableAttributedString *atr = [[NSMutableAttributedString alloc] initWithString:YYTextAttachmentToken];
     
     YYTextAttachment *attach = [YYTextAttachment new];

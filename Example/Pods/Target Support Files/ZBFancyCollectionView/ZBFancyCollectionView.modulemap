@@ -1,0 +1,6 @@
+framework module ZBFancyCollectionView {
+  umbrella header "ZBFancyCollectionView-umbrella.h"
+
+  export *
+  module * { export * }
+}

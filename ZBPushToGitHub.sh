@@ -3,8 +3,8 @@
 echo "pod update..."
 
 git add .
-git commit  -m "fix:增加safe,对dict取值容错"
-git tag "0.0.5"
+git commit  -m "feature:增加直接生成attributedString的api,以及性能测试界面"
+git tag "0.0.6"
 git push origin master
 git push --tags
 pod trunk push ZBImageText.podspec --allow-warnings
