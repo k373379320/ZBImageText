@@ -17,6 +17,7 @@
 #define kStartTime
 #define kEnd(__log__)
 #endif
+
 @interface ZBViewController ()
 
 @property (nonatomic, strong) YYLabel *label;
@@ -43,7 +44,7 @@
 
 - (void)makeImageText
 {
-    [self.label ZB_makeContexts:^(ZBImageTextMaker *make) {
+    [self.label zb_makeContexts^(ZBImageTextMaker *make) {
         make.space(4.0);
         
         //默认

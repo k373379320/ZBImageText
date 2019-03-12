@@ -12,8 +12,8 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 
 #ifdef DEBUG
-#define kStartTime CFAbsoluteTime startTime = CFAbsoluteTimeGetCurrent();
-#define kEnd(__log__) CFAbsoluteTime linkTime = (CFAbsoluteTimeGetCurrent() - startTime); NSLog(@"📝--%@-->  %f ms", __log__, linkTime * 1000.0);
+#define kStartTime //CFAbsoluteTime startTime = CFAbsoluteTimeGetCurrent();
+#define kEnd(__log__) //CFAbsoluteTime linkTime = (CFAbsoluteTimeGetCurrent() - startTime); NSLog(@"📝--%@-->  %f ms", __log__, linkTime * 1000.0);
 #else
 #define kStartTime
 #define kEnd(__log__)
