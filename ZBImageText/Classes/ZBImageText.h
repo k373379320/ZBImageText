@@ -9,7 +9,10 @@
 #import <Foundation/Foundation.h>
 @class ZBImageTextMaker;
 
-@class ZBImageTextItemBackground, ZBImageTextItemBorder;
+@class ZBImageTextItemBackground, ZBImageTextItemBorder, ZBImageTextItemDecoration;
+
+typedef void(^YYTextAction)(UIView *containerView, NSAttributedString *text, NSRange range, CGRect rect);
+
 
 @interface ZBImageText : NSObject
 
@@ -33,6 +36,10 @@
 
 @property (nonatomic, copy) ZBImageTextItemText * (^ border)(ZBImageTextItemBorder *border);
 
+@property (nonatomic, copy) ZBImageTextItemText * (^ tap)(YYTextAction action);
+
+@property (nonatomic, copy) ZBImageTextItemText * (^ decoration)(ZBImageTextItemDecoration *decoration);
+
 @end
 
 @interface ZBImageTextItemImage : ZBImageText
@@ -48,6 +55,8 @@
 @property (nonatomic, copy) ZBImageTextItemImage * (^ border)(ZBImageTextItemBorder *border);
 
 @property (nonatomic, copy) ZBImageTextItemImage * (^ url)(id url);
+
+@property (nonatomic, copy) ZBImageTextItemImage * (^ tap)(YYTextAction action);
 
 @end
 
@@ -68,5 +77,16 @@
                           width:(CGFloat)width
                          radius:(CGFloat)radius
                          margin:(UIEdgeInsets)margin;
+
+@end
+
+@interface ZBImageTextItemDecoration : ZBImageText
+
+//删除线,与字体颜色一致;
++ (instancetype)decoration;
+//删除线,自定义高度,颜色,
++ (instancetype)decorationWithHeight:(CGFloat)height color:(UIColor *)color;
+//删除线,自定义高度,颜色,偏移位置
++ (instancetype)decorationWithHeight:(CGFloat)height color:(UIColor *)color offset:(CGFloat)offset;
 
 @end

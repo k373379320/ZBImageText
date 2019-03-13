@@ -11,6 +11,8 @@
 #import "ZBImageText.h"
 
 typedef void(^ZBImageTextBlock)(id obj);
+typedef void(^YYTextAction)(UIView *containerView, NSAttributedString *text, NSRange range, CGRect rect);
+
 
 @interface ZBImageTextMaker : NSObject
 

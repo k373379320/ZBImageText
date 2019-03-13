@@ -11,7 +11,7 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "NSDictionary+ZBImageTextSafe.h"
 
-typedef void(^ZBImageTextBlock)(id obj);
+typedef void (^ZBImageTextBlock)(id obj);
 
 #ifdef DEBUG
 #define kStartTime //CFAbsoluteTime startTime = CFAbsoluteTimeGetCurrent();
@@ -157,7 +157,9 @@ typedef void(^ZBImageTextBlock)(id obj);
     //hook
     ZBImageTextBlock imageViewBlock = data[@"imageView"] ? : nil;
     ZBImageTextBlock itemBlock = data[@"item"] ? : nil;
-    ZBImageTextBlock downloadImageBlock = data[@"download"] ? : nil;
+    
+    //action
+    YYTextAction tapAction = data[@"tap"] ? : nil;
     
     CGFloat width = [data zb_safeFloatValueForKey:@"width" defaultValue:image.size.width];
     CGFloat height = [data zb_safeFloatValueForKey:@"height" defaultValue:image.size.height];
@@ -171,22 +173,14 @@ typedef void(^ZBImageTextBlock)(id obj);
     {
         UIImageView *imageV = [[UIImageView alloc] initWithFrame:CGRectMake(0, offset, containerSize.width, containerSize.height)];
         if (imageURL) {
-            if (downloadImageBlock) {
-                downloadImageBlock(@{
-                                     @"imageView" : imageV,
-                                     @"URL" : imageURL,
-                                     @"placeholderImage"  : image,
-                                     });
-            } else {
-                [imageV sd_setImageWithURL:imageURL placeholderImage:image completed:^(UIImage *_Nullable image, NSError *_Nullable error, SDImageCacheType cacheType, NSURL *_Nullable imageURL) {
-                    CALayer *superLayer = containerLayer.superlayer;
-                    if (superLayer && [superLayer.delegate isKindOfClass:[YYLabel class]]) {
-                        imageV.layer.contents = (id)image.CGImage;
-                        YYLabel *label = (YYLabel *)superLayer.delegate;
-                        [label setNeedsLayout];
-                    }
-                }];
-            }           
+            [imageV sd_setImageWithURL:imageURL placeholderImage:image completed:^(UIImage *_Nullable image, NSError *_Nullable error, SDImageCacheType cacheType, NSURL *_Nullable imageURL) {
+                CALayer *superLayer = containerLayer.superlayer;
+                if (superLayer && [superLayer.delegate isKindOfClass:[YYLabel class]]) {
+                    imageV.layer.contents = (id)image.CGImage;
+                    YYLabel *label = (YYLabel *)superLayer.delegate;
+                    [label setNeedsLayout];
+                }
+            }];
         } else {
             imageV.image = image;
         }
@@ -209,6 +203,10 @@ typedef void(^ZBImageTextBlock)(id obj);
     }
     
     NSMutableAttributedString *atr = [[NSMutableAttributedString alloc] initWithString:YYTextAttachmentToken];
+    
+    if (tapAction) {
+        [atr yy_setTextHighlightRange:NSMakeRange(0, YYTextAttachmentToken.length) color:[UIColor clearColor] backgroundColor:[UIColor clearColor] tapAction:tapAction];
+    }
     
     YYTextAttachment *attach = [YYTextAttachment new];
     attach.content = containerLayer;
@@ -235,7 +233,6 @@ typedef void(^ZBImageTextBlock)(id obj);
 
 + (ZBImageTextItem *)textTemplateWithData:(NSDictionary *)data
 {
-    
     NSString *text = [data zb_safeStringValueForKey:@"text" defaultValue:@""];
     if (text.length <= 0) {
         return nil;
@@ -270,11 +267,14 @@ typedef void(^ZBImageTextBlock)(id obj);
             borderMargin = [bg[@"margin"] UIEdgeInsetsValue];
         }
     }
+    NSDictionary *textDecoration = [data zb_safeDictionaryValueForKey:@"decoration" defaultValue:nil];
     //hook
     ZBImageTextBlock imageViewBlock = data[@"imageView"] ? : nil;
     ZBImageTextBlock itemBlock = data[@"item"] ? : nil;
     ZBImageTextBlock textLayerBlock = data[@"textLayer"] ? : nil;
     
+    //action
+    YYTextAction tapAction = data[@"tap"] ? : nil;
     
     CGSize containerSize = [text sizeWithAttributes:@{
                                                       NSFontAttributeName : font
@@ -311,8 +311,9 @@ typedef void(^ZBImageTextBlock)(id obj);
         }
         [containerLayer addSublayer:imageV.layer];
     }
+    NSMutableAttributedString *textAttributedString;
     {
-        NSMutableAttributedString *textAttributedString = [[NSMutableAttributedString alloc] initWithString:text];
+        textAttributedString = [[NSMutableAttributedString alloc] initWithString:text];
         textAttributedString.yy_font = font;
         textAttributedString.yy_color = color;
         textAttributedString.yy_lineSpacing = 0;
@@ -331,10 +332,25 @@ typedef void(^ZBImageTextBlock)(id obj);
         if (textLayerBlock) {
             textLayerBlock(textLayer);
         }
+        if (textDecoration) {
+            UIColor *decorationColor = textDecoration[@"color"] ? textDecoration[@"color"] : color;
+            CGFloat height = [textDecoration zb_safeFloatValueForKey:@"height" defaultValue:1];
+            CGFloat offset = [textDecoration zb_safeFloatValueForKey:@"offset" defaultValue:0];
+            CALayer *decorationLayer = [CALayer layer];
+            decorationLayer.backgroundColor = decorationColor.CGColor;
+            decorationLayer.frame = CGRectMake(0, CGRectGetMinY(textLayer.frame) + CGRectGetHeight(textLayer.frame) * 0.5 + -height * 0.5 + offset, CGRectGetWidth(containerLayer.frame), height);
+            [containerLayer addSublayer:decorationLayer];
+        }
         [containerLayer addSublayer:textLayer];
     }
     
     NSMutableAttributedString *atr = [[NSMutableAttributedString alloc] initWithString:YYTextAttachmentToken];
+    
+    if (tapAction) {
+        [atr yy_setTextHighlightRange:NSMakeRange(0, YYTextAttachmentToken.length) color:[UIColor clearColor] backgroundColor:[UIColor clearColor] tapAction:^(UIView * _Nonnull containerView, NSAttributedString * _Nonnull text1, NSRange range, CGRect rect) {
+            tapAction(containerView,textAttributedString,range,rect);
+        }];
+    }
     
     if (baselineFont) {
         //垂直居中: 先底部对齐,再偏移字体高度的一半;

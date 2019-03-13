@@ -89,6 +89,25 @@
     };
 }
 
+- (ZBImageTextItemText * (^)(YYTextAction action))tap
+{
+    return ^ZBImageTextItemText * (YYTextAction action) {
+        if (action) {
+            self.info[@"tap"] = action;
+        }
+        return self;
+    };
+}
+
+- (ZBImageTextItemText * (^)(ZBImageTextItemDecoration *decoration))decoration
+{
+    return ^ZBImageTextItemText * (ZBImageTextItemDecoration *decoration) {
+        if (decoration.info) {
+            self.info[@"decoration"] = decoration.info;
+        }
+        return self;
+    };
+}
 @end
 @implementation ZBImageTextItemImage
 
@@ -146,6 +165,16 @@
     };
 }
 
+- (ZBImageTextItemImage * (^)(YYTextAction action))tap
+{
+    return ^ZBImageTextItemImage * (YYTextAction action) {
+        if (action) {
+            self.info[@"tap"] = action;
+        }
+        return self;
+    };
+}
+
 @end
 
 @implementation ZBImageTextItemBackground
@@ -182,6 +211,34 @@
     border.info[@"width"] = @(width);
     border.info[@"radius"] = @(radius);
     return border;
+}
+
+@end
+@implementation ZBImageTextItemDecoration
+
++ (instancetype)decoration
+{
+    return [self decorationWithHeight:0 color:nil offset:0];
+}
+
++ (instancetype)decorationWithHeight:(CGFloat)height color:(UIColor *)color
+{
+     return [self decorationWithHeight:height color:color offset:0];
+}
+
++ (instancetype)decorationWithHeight:(CGFloat)height color:(UIColor *)color offset:(CGFloat)offset
+{
+    ZBImageTextItemDecoration *decoration = [[ZBImageTextItemDecoration alloc] init];
+    if (color) {
+        decoration.info[@"color"] = color;
+    }
+    if (height > 0) {
+        decoration.info[@"height"] = @(height);
+    }
+    if (offset > 0) {
+        decoration.info[@"offset"] = @(offset);
+    }
+    return decoration;
 }
 
 @end
