@@ -1,21 +1,5 @@
 PODS:
-  - BlocksKit (2.2.5):
-    - BlocksKit/All (= 2.2.5)
-  - BlocksKit/All (2.2.5):
-    - BlocksKit/Core
-    - BlocksKit/DynamicDelegate
-    - BlocksKit/MessageUI
-    - BlocksKit/UIKit
-  - BlocksKit/Core (2.2.5)
-  - BlocksKit/DynamicDelegate (2.2.5)
-  - BlocksKit/MessageUI (2.2.5):
-    - BlocksKit/Core
-    - BlocksKit/DynamicDelegate
-  - BlocksKit/UIKit (2.2.5):
-    - BlocksKit/Core
-    - BlocksKit/DynamicDelegate
   - FBRetainCycleDetector (0.1.4)
-  - Masonry (1.1.0)
   - MLeaksFinder (1.0.0):
     - FBRetainCycleDetector
   - SDWebImage (4.4.6):
@@ -23,13 +7,11 @@ PODS:
   - SDWebImage/Core (4.4.6)
   - YYText (1.0.7)
   - ZBFancyCollectionView (1.1.0)
-  - ZBImageText (0.0.7):
+  - ZBImageText (0.0.8):
     - SDWebImage
     - YYText
 
 DEPENDENCIES:
-  - BlocksKit
-  - Masonry
   - MLeaksFinder
   - SDWebImage
   - YYText
@@ -41,15 +23,13 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
-  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
   ZBFancyCollectionView: 8ce39ed5f8a799863eb49fb01e95c0ad0cec6941
-  ZBImageText: f2e6ebb0572581b48196acfb9c77bb330a02c02e
+  ZBImageText: 716958e3229d8d29c08ee7bb56db65bce31ecc34
 
-PODFILE CHECKSUM: 82c8285a6d54fd15371bb0946e50f4b39a670d4d
+PODFILE CHECKSUM: 61e6856d262d772883d0bfa7a8acbdbc6c47d5e4
 
 COCOAPODS: 1.4.0

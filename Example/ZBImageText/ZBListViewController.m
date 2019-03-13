@@ -28,9 +28,10 @@
     [self.collectionView zb_configTableView:^(ZBCollectionProtoFactory *config) {
         config.cell(@"<item>").cls(@"ZBItemCell");
     }];
+    
     [self.collectionView zb_setup:^(ZBCollectionMaker *maker) {
         maker.section(@"one");
-        for (NSInteger idx = 0; idx < 100; idx++) {
+        for (NSInteger idx = 0; idx < 200; idx++) {
             NSAttributedString *attributedString = [YYLabel zb_attributedStringWithContexts:^(ZBImageTextMaker *make) {
                 for (NSInteger idx = 0; idx < 3; idx++) {
                     make.space(4.0);
@@ -80,10 +81,10 @@
                     .border([ZBImageTextItemBorder borderWithColor:[UIColor redColor] width:0.5 radius:2 margin:UIEdgeInsetsMake(2, 3, 2, 3)]);
                 }
             }];
-            
             maker.row(@"<item>").model(@{ @"attributedString" : attributedString });
         }
     }];
+    
     [self.view addSubview:self.collectionView];
     
     UILabel *fpsLabel = [[UILabel alloc] initWithFrame:CGRectMake(50, CGRectGetHeight([UIApplication sharedApplication].statusBarFrame) + 50, 50, 15)];

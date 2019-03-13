@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
     s.name = 'ZBImageText'
-    s.version = '0.0.8'
+    s.version = '0.0.9'
     s.summary = 'A delightful iOS Uitilty framework.'
     s.homepage = 'https://github.com/k373379320/ZBImageText'
     s.license = { :type => 'MIT', :file => 'LICENSE' }

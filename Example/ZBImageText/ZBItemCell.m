@@ -17,6 +17,7 @@
         self.contentView.layer.borderColor = [UIColor blackColor].CGColor;
         self.contentView.layer.borderWidth = 0.5f;
         self.label.numberOfLines = 0;
+        self.label.displaysAsynchronously = YES;
     }    
     return self;
 }

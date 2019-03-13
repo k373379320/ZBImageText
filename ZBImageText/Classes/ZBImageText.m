@@ -194,6 +194,12 @@
 
 @implementation ZBImageTextItemBorder
 
++ (instancetype)borderWithRadius:(CGFloat)radius
+{
+    return [self borderWithColor:nil width:0 radius:radius margin:UIEdgeInsetsZero];
+}
+
+
 + (instancetype)borderWithColor:(UIColor *)color width:(CGFloat)width radius:(CGFloat)radius
 {
     return [self borderWithColor:color width:width radius:radius margin:UIEdgeInsetsZero];
@@ -207,9 +213,15 @@
     
     ZBImageTextItemBorder *border = [[ZBImageTextItemBorder alloc] init];
     border.info[@"margin"] = [NSValue valueWithUIEdgeInsets:margin];
-    border.info[@"color"] = color ? : [UIColor blackColor];
-    border.info[@"width"] = @(width);
-    border.info[@"radius"] = @(radius);
+    if (color) {
+        border.info[@"color"] = color;
+    }
+    if (width > 0) {
+        border.info[@"width"] = @(width);
+    }
+    if (radius > 0) {
+        border.info[@"radius"] = @(radius);
+    }
     return border;
 }
 

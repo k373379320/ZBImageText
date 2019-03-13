@@ -17,7 +17,6 @@
 #define kStartTime
 #define kEnd(__log__)
 #endif
-
 @interface ZBViewController ()
 
 @property (nonatomic, strong) YYLabel *label;
@@ -101,7 +100,7 @@
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     kStartTime;
-    for (NSInteger idx = 0; idx < 10; idx++) {
+    for (NSInteger idx = 0; idx < 100; idx++) {
         [self makeImageText];
     }
     kEnd(@"总耗时");

@@ -69,6 +69,8 @@ typedef void(^YYTextAction)(UIView *containerView, NSAttributedString *text, NSR
 
 @interface ZBImageTextItemBorder : ZBImageText
 
++ (instancetype)borderWithRadius:(CGFloat)radius;
+
 + (instancetype)borderWithColor:(UIColor *)color
                           width:(CGFloat)width
                          radius:(CGFloat)radius;
@@ -82,11 +84,22 @@ typedef void(^YYTextAction)(UIView *containerView, NSAttributedString *text, NSR
 
 @interface ZBImageTextItemDecoration : ZBImageText
 
-//删除线,与字体颜色一致;
+/**
+ 删除线,与字体颜色一致
+ */
 + (instancetype)decoration;
-//删除线,自定义高度,颜色,
-+ (instancetype)decorationWithHeight:(CGFloat)height color:(UIColor *)color;
-//删除线,自定义高度,颜色,偏移位置
-+ (instancetype)decorationWithHeight:(CGFloat)height color:(UIColor *)color offset:(CGFloat)offset;
+
+/**
+ 删除线,自定义高度,颜色,
+ */
++ (instancetype)decorationWithHeight:(CGFloat)height
+                               color:(UIColor *)color;
+
+/**
+ 删除线,自定义高度,颜色,偏移位置
+ */
++ (instancetype)decorationWithHeight:(CGFloat)height
+                               color:(UIColor *)color
+                              offset:(CGFloat)offset;
 
 @end

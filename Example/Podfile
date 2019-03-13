@@ -7,8 +7,6 @@ target 'ZBImageText_Example' do
   pod 'ZBImageText', :path => '../'
 
   pod 'YYText'
-  pod 'BlocksKit'
-  pod 'Masonry'
   pod 'SDWebImage'
   pod 'MLeaksFinder',   :configurations => ['Debug']
   pod 'ZBFancyCollectionView'
