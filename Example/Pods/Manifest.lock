@@ -7,7 +7,7 @@ PODS:
   - SDWebImage/Core (4.4.6)
   - YYText (1.0.7)
   - ZBFancyCollectionView (1.1.0)
-  - ZBImageText (0.0.9):
+  - ZBImageText (0.1.1):
     - SDWebImage
     - YYText
 
@@ -18,9 +18,17 @@ DEPENDENCIES:
   - ZBFancyCollectionView
   - ZBImageText (from `../`)
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - FBRetainCycleDetector
+    - MLeaksFinder
+    - SDWebImage
+    - YYText
+    - ZBFancyCollectionView
+
 EXTERNAL SOURCES:
   ZBImageText:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
@@ -28,8 +36,8 @@ SPEC CHECKSUMS:
   SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
   ZBFancyCollectionView: 8ce39ed5f8a799863eb49fb01e95c0ad0cec6941
-  ZBImageText: 14bebf500b9227b872267df64d86e116ebde4443
+  ZBImageText: daa11916ef0c376cce6545435c568d78effb055c
 
-PODFILE CHECKSUM: 0cc9000358ca34ad20c41ace199d17d58641a2de
+PODFILE CHECKSUM: ca0ac99891a9b5defb8094107c64c31decd19a1b
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3

@@ -156,12 +156,6 @@ typedef void (^ZBImageTextBlock)(id obj);
         return nil;
     }
     NSURL *imageURL = [NSURL URLWithString:[data zb_safeStringValueForKey:@"url" defaultValue:@""]];
-    UIImage *webCacheImage;
-    if (imageURL.absoluteString.length > 0) {
-        NSString *key =  [[SDWebImageManager sharedManager] cacheKeyForURL:imageURL];
-        webCacheImage = [[[SDWebImageManager sharedManager] imageCache] imageFromCacheForKey:key];
-        image = webCacheImage;
-    }
     CGFloat imageWidth = [data zb_safeFloatValueForKey:@"width" defaultValue:image.size.width];
     CGFloat imageHeight = [data zb_safeFloatValueForKey:@"height" defaultValue:image.size.height];
     NSDictionary *border = [data zb_safeDictionaryValueForKey:@"border" defaultValue:nil];
@@ -180,7 +174,7 @@ typedef void (^ZBImageTextBlock)(id obj);
     containerLayer.frame = CGRectMake(0, 0, containerSize.width, containerSize.height);
     {
         UIImageView *imageV = [[UIImageView alloc] initWithFrame:CGRectMake(0, offsetY, containerSize.width, containerSize.height)];
-        if (imageURL && !webCacheImage) {
+        if (imageURL) {
             [imageV sd_setImageWithURL:imageURL placeholderImage:image completed:^(UIImage *_Nullable image, NSError *_Nullable error, SDImageCacheType cacheType, NSURL *_Nullable imageURL) {
                 CALayer *superLayer = containerLayer.superlayer;
                 if (superLayer && [superLayer.delegate isKindOfClass:[YYLabel class]]) {
