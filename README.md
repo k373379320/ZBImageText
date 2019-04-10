@@ -12,6 +12,7 @@
 - 富文本文字后面有边框样式问题;
 - 富文本文字/图片有事件
 - 写富文本代码啰嗦;
+- 对image优化Color Blended Layers
 ...
 
 ## Features
