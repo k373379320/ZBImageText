@@ -10,6 +10,7 @@
 #import <YYText/YYText.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "NSDictionary+ZBImageTextSafe.h"
+#import "ZBImageTextUtilities.h"
 
 typedef void (^ZBImageTextBlock)(id obj);
 
@@ -150,10 +151,11 @@ typedef void (^ZBImageTextBlock)(id obj);
 {
     //data
     UIImage *image = data[@"image"];
+    image = [ZBImageTextUtilities highQualityImageWithOriginalImage:image];
     if (![image isKindOfClass:[UIImage class]] || CGSizeEqualToSize(image.size, CGSizeZero)) {
         return nil;
     }
-    NSURL *imageURL = imageURL = [NSURL URLWithString:[data zb_safeStringValueForKey:@"url" defaultValue:@""]];
+    NSURL *imageURL = [NSURL URLWithString:[data zb_safeStringValueForKey:@"url" defaultValue:@""]];
     UIImage *webCacheImage;
     if (imageURL.absoluteString.length > 0) {
         NSString *key =  [[SDWebImageManager sharedManager] cacheKeyForURL:imageURL];
@@ -182,13 +184,13 @@ typedef void (^ZBImageTextBlock)(id obj);
             [imageV sd_setImageWithURL:imageURL placeholderImage:image completed:^(UIImage *_Nullable image, NSError *_Nullable error, SDImageCacheType cacheType, NSURL *_Nullable imageURL) {
                 CALayer *superLayer = containerLayer.superlayer;
                 if (superLayer && [superLayer.delegate isKindOfClass:[YYLabel class]]) {
-                    imageV.layer.contents = (id)image.CGImage;
+                    imageV.layer.contents = (id)[ZBImageTextUtilities highQualityImageWithOriginalImage:image].CGImage;
                     YYLabel *label = (YYLabel *)superLayer.delegate;
                     [label setNeedsLayout];
                 }
             }];
         } else {
-            imageV.image = image;
+            imageV.image = [ZBImageTextUtilities highQualityImageWithOriginalImage:image];
         }
         
         if (border) {
@@ -247,10 +249,9 @@ typedef void (^ZBImageTextBlock)(id obj);
     if (text.length <= 0) {
         return nil;
     }
-    UIFont *font = data[@"font"] ? data[@"font"] : [UIFont systemFontOfSize:15];
-    UIColor *color =  data[@"color"] ? data[@"color"] : [UIColor blackColor];
-    UIFont *baselineFont = data[@"baselineFont"] ? data[@"baselineFont"] : nil;
-    
+    UIFont *font = [data zb_safeFontValueForKey:@"font" defaultValue:[UIFont systemFontOfSize:15]];
+    UIColor *color =  [data zb_safeColorValueForKey:@"color" defaultValue:[UIColor blackColor]];
+    UIFont *baselineFont = [data zb_safeFontValueForKey:@"baselineFont" defaultValue:nil];
     //border
     NSDictionary *border = [data zb_safeDictionaryValueForKey:@"border" defaultValue:nil];
     UIEdgeInsets borderMargin;
@@ -259,7 +260,7 @@ typedef void (^ZBImageTextBlock)(id obj);
     CGFloat borderRadius = 0;
     if (border) {
         borderMargin = border[@"margin"] ? [border[@"margin"] UIEdgeInsetsValue] : UIEdgeInsetsZero;
-        borderColor = border[@"color"] ? border[@"color"] : [UIColor blackColor];
+        borderColor = [border zb_safeColorValueForKey:@"color" defaultValue:[UIColor blackColor]];
         borderWidth = [border zb_safeFloatValueForKey:@"width" defaultValue:0.5];
         borderRadius = [border zb_safeFloatValueForKey:@"radius" defaultValue:0.5];
     }
@@ -270,7 +271,7 @@ typedef void (^ZBImageTextBlock)(id obj);
     //bg
     NSDictionary *backgroundInfo = [data zb_safeDictionaryValueForKey:@"bg" defaultValue:nil];
     BOOL bgImageStretchable = [backgroundInfo zb_safeBoolValueForKey:@"stretchable" defaultValue:YES];
-    UIImage *bgImage = backgroundInfo[@"image"] ? backgroundInfo[@"image"] : nil;
+    UIImage *bgImage = [backgroundInfo zb_safeImageValueForKey:@"image" defaultValue:nil];
     if (bgImage) {
         if (backgroundInfo[@"margin"]) {
             borderMargin = [backgroundInfo[@"margin"] UIEdgeInsetsValue];
@@ -344,7 +345,7 @@ typedef void (^ZBImageTextBlock)(id obj);
             textLayerBlock(textLayer);
         }
         if (textDecoration) {
-            UIColor *decorationColor = textDecoration[@"color"] ? textDecoration[@"color"] : color;
+            UIColor *decorationColor = [textDecoration zb_safeColorValueForKey:@"color" defaultValue:color];
             CGFloat height = [textDecoration zb_safeFloatValueForKey:@"height" defaultValue:1];
             CGFloat offset = [textDecoration zb_safeFloatValueForKey:@"offset" defaultValue:0];
             CALayer *decorationLayer = [CALayer layer];

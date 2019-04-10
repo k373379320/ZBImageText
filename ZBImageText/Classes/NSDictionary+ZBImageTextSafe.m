@@ -111,4 +111,39 @@
     }
 }
 
+- (UIFont *)zb_safeFontValueForKey:(id)key defaultValue:(UIFont *)defaultValue
+{
+    id value = self[key];
+    if (value == nil) {
+        return defaultValue;
+    } else if ([value isKindOfClass:[UIFont class]]) {
+        return value;
+    } else {
+        return defaultValue;
+    }
+}
+
+- (UIColor *)zb_safeColorValueForKey:(id)key defaultValue:(UIColor *)defaultValue
+{
+    id value = self[key];
+    if (value == nil) {
+        return defaultValue;
+    } else if ([value isKindOfClass:[UIColor class]]) {
+        return value;
+    } else {
+        return defaultValue;
+    }
+}
+
+- (UIImage *)zb_safeImageValueForKey:(id)key defaultValue:(UIImage *)defaultValue
+{
+    id value = self[key];
+    if (value == nil) {
+        return defaultValue;
+    } else if ([value isKindOfClass:[UIImage class]]) {
+        return value;
+    } else {
+        return defaultValue;
+    }
+}
 @end

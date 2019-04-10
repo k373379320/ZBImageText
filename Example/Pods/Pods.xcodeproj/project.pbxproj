@@ -12,13 +12,13 @@
 		046D1891C7BD671C4DD550E8258A8AFB /* SDAnimatedImageRep.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF8D68B8F403B0759B1857B36551D4A /* SDAnimatedImageRep.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04790EA3A0EEB7FD6263576F6971B0AD /* SDWebImageCoderHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 3100F615DD51FE9BF9ADD917E44DA3B3 /* SDWebImageCoderHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04F83A942F842AECDD40AC19F480E6E1 /* YYTextParser.h in Headers */ = {isa = PBXBuildFile; fileRef = E3BFB5DB115A7F089D12D57A2DAEB7E2 /* YYTextParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05E03DF81668410A7E54E79FEE282C78 /* YYLabel+ZBImageTextAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = BEF5F3A1585BF19909F456DE372D020A /* YYLabel+ZBImageTextAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		069D640AD1DEFE6A76F581264C14A6A6 /* UIView+MemoryLeak.h in Headers */ = {isa = PBXBuildFile; fileRef = D9A47DA49EC47BC2D5E676055B31562D /* UIView+MemoryLeak.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		06B22C3F0BC8D8AC168382BB2029533C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4370E2BDC346F6CDDEB5B7715B7BA66 /* CoreGraphics.framework */; };
 		087BC2BCB57DC94C255C3D4F9FE5E4D5 /* FBObjectGraphConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F29A83D49EA95460730672778C536C3 /* FBObjectGraphConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0A84900306565EBDD501D80654822AA0 /* NSAttributedString+YYText.m in Sources */ = {isa = PBXBuildFile; fileRef = DB41634D087F576745057038E3AED38B /* NSAttributedString+YYText.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		0A888C08273EAE94052790C556CAA414 /* SDWebImageImageIOCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 662D14CCC4A70ED5E6A5320D74700860 /* SDWebImageImageIOCoder.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		0AE02CE48F6DDC753B93C0AB778D0A61 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5B917D945725822204A1204B1BF395 /* CoreFoundation.framework */; };
-		0B697179B7DCA48FA238216BBFC5F124 /* ZBImageText.m in Sources */ = {isa = PBXBuildFile; fileRef = 23EF85B939D3DEC24895C7E159E9D0FE /* ZBImageText.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		0CA04C382185ACA2148AD730A5E2B43F /* FBBlockStrongLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5328E0DACFBF09AE3531DDE5CA0B4527 /* FBBlockStrongLayout.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		0F24576FE0D6B352205145EB96B6BA2A /* FBRetainCycleDetector.h in Headers */ = {isa = PBXBuildFile; fileRef = 30235F3C366F02F46BF972333CE503A3 /* FBRetainCycleDetector.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		110F1A99E91406F841D0DEE2D7D1415A /* ZBFancyLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 42069C9D487E271A7221198B3A837576 /* ZBFancyLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -30,6 +30,7 @@
 		1461CFB2AD997F129E7DA8F01F827DE5 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 435251CB2B95458E56DA6397CDA1D2ED /* CoreText.framework */; };
 		160656A7D8622DBA52D57CD0C875D422 /* SDWebImageCodersManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A0AE778FE036A9025D717BBDBE1B2CA3 /* SDWebImageCodersManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1661C8D076B80EFD0129EC5E390108B2 /* FBRetainCycleDetector+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 27DEFDCAEE17EF3E656B21436F3DC7C6 /* FBRetainCycleDetector+Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		18BE4013BF46CCA639C6713702BD4CBB /* ZBImageTextUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6484A34C9FBF1626C38FD4038AF089 /* ZBImageTextUtilities.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		18CBC45462C83773DA47DAF31176CCC2 /* FBObjectiveCBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D00CA8E2BA69E7FA8D7469521F300AA /* FBObjectiveCBlock.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		196CDA13EEB87FEBC66D08DCE8AD292F /* UIImage+ForceDecode.m in Sources */ = {isa = PBXBuildFile; fileRef = C46443F46C9D24ADEDF63210C30734BE /* UIImage+ForceDecode.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1A6ACEC2F203AF198551B3A84E411F20 /* FBBlockStrongLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F6361BDA1FDA61AB5624F1C598B8F29 /* FBBlockStrongLayout.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -56,12 +57,13 @@
 		2F6E11E4324D923D9E2F47030040A4AC /* NSObject+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5E9799D88B915F39E65CDB2E581485 /* NSObject+MemoryLeak.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		32E8AB36FF60A7DD34510658C9965F90 /* ZBFancyLayoutHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = C3DB0FCE9E354439E6DEBFB56F140DF8 /* ZBFancyLayoutHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		36835BE01910B444AA9862BCF61D0D46 /* YYTextRunDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490761003CF0BF2B52E647997FCA60A /* YYTextRunDelegate.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3A06C22E6E44B7214717CA3949730C1C /* ZBImageText.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF5FA778719D292A12800192DFCB26D /* ZBImageText.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		3B930F550ED3458D28CEA50173AC3FBC /* SDWebImageGIFCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 91D65911054805B87F431692ED75B1CF /* SDWebImageGIFCoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C3692EC87C276173F07C16EA9D46D82 /* ZBFancyCollectionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ADC89A2D9F11A784F7F7BEBDD4C8222 /* ZBFancyCollectionData.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3CE5E3809194DA1CE611229381D06A25 /* ZBImageTextMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = F221DBD59BFCD53E8DA73C3860CC997F /* ZBImageTextMaker.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		3F384E2264AAF115677D720A4E93EB4B /* MLeaksFinder-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C541ED5CEB228D7EA4B832656713A3B /* MLeaksFinder-dummy.m */; };
 		40FAFFAA86FF48BC1E14E8D10E3B9E60 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A4421C4B6AAC9EFF46E39F72293CCBB /* Accelerate.framework */; };
 		42825BBBD6E1EF5D4F17989A54F84012 /* SDWebImageTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = 806020A8CE1AFE3F3DBCD03FF9673B31 /* SDWebImageTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		442440011322B87676E3D7E2EFF8C639 /* ZBImageText.h in Headers */ = {isa = PBXBuildFile; fileRef = 596E775BB51387BD80D0775B67FBDA46 /* ZBImageText.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		45E7DB14DA506556216EFCE9E69F11E9 /* YYText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C88D812DE9F3506A5604808E18F39E63 /* YYText.framework */; };
 		462ABE3FE576CFBB864E3CEE37F42308 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9313F5C4DD4EC067AC862A4C13DE3F /* Foundation.framework */; };
 		462D2CA69F7C5894DDB0CB7C689346CB /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B5AA25AA25D8264258F504BB94BC4A /* SDWebImageCompat.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -78,10 +80,12 @@
 		5088852E6C0999278A6D02485BEB1036 /* FBAssociationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F66AE82B0ED5437CF30D1E01D555D1C /* FBAssociationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		517EE9DA140361E93ED31A36206A912F /* SDWebImagePrefetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = E3E3370A63648102050F97DB1F6D5D98 /* SDWebImagePrefetcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		533AF9C8E6AA8A3CA07AE8ABA149A816 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF86FD91A6F7C9EC29A335983504A03 /* NSData+ImageContentType.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		536C4A351E8CB801D3B86323945858F8 /* ZBImageTextUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B720C31889955544183DC8ABFCD8B1A /* ZBImageTextUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5370E2C3F471BF5933781012CC3980DF /* YYTextInput.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BF78BB951CBC591E201B95920B17B7 /* YYTextInput.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		545AB67F1E8F3640E134A5D26B3CCC25 /* FBStandardGraphEdgeFilters.h in Headers */ = {isa = PBXBuildFile; fileRef = FCEE0609F6DDC73297E24C53495E147C /* FBStandardGraphEdgeFilters.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		55F7E7604F5668F29EDECFE1A6CD744A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54215B051DE089F14BDF17E8322604A4 /* QuartzCore.framework */; };
 		562C7447C238738329DCC2D648B66E4D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E553ED6AF759CAE321D763469A7DB663 /* UIKit.framework */; };
+		56C2C168FFA922A656B390A17048ED75 /* ZBImageTextMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = 68E67CAA2BAAA03BE01C2AAC3DA7484B /* ZBImageTextMaker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		579C019F75D6DC2F9DE5741DC62C51E3 /* YYTextMagnifier.h in Headers */ = {isa = PBXBuildFile; fileRef = E462C068F85F7A5D9EE8663E262808DA /* YYTextMagnifier.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		58168C2665671112AAF9346A431A4A38 /* BaseType.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C58627894CF1D85E887A43600F33A39 /* BaseType.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		59D2D6507EEFE35CC9A59FBD8FCDAE59 /* SDAnimatedImageRep.m in Sources */ = {isa = PBXBuildFile; fileRef = CE66E84E70A4B6091E4910A00639925C /* SDAnimatedImageRep.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -134,13 +138,13 @@
 		808E7341B7D12B20DA543FEDB00C58E1 /* YYTextContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2414AC804BD92157DB37BD08B37AB185 /* YYTextContainerView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		811D232A7F08C49428697122B7964912 /* FBRetainCycleDetector.mm in Sources */ = {isa = PBXBuildFile; fileRef = DC2D08808DC25B9EA7D7241C5C80D910 /* FBRetainCycleDetector.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		82F69EA25BF79C9C44F2DEBEE599C95D /* UINavigationController+MemoryLeak.h in Headers */ = {isa = PBXBuildFile; fileRef = 97B44121E1A37375F09DF06D66A55242 /* UINavigationController+MemoryLeak.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		852C796A0493B35339F47E45F84A133F /* ZBImageTextEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C8E2D91CA4F24306E17C426BE860933 /* ZBImageTextEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8592ACDA77DE4C57A93C5CDBE67F4D8C /* ZBFancyItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FBD471E75A42CDE3F8B320AC9E875D4 /* ZBFancyItem.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		85956521D7BC6F652B9E47E4E358AABB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E553ED6AF759CAE321D763469A7DB663 /* UIKit.framework */; };
 		85A742A809B43E92E169C68BDADAFD10 /* YYTextTransaction.h in Headers */ = {isa = PBXBuildFile; fileRef = 0494DDC0B5ABBC9BA24C943DC90CEA24 /* YYTextTransaction.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		88668D020C8CB985DC5FE00535D1C9C8 /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB16014861F7323B2FDDD0A164F784D /* UIImage+GIF.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		88F0D07F0DCE329EC4A7EE2A741DB30C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9313F5C4DD4EC067AC862A4C13DE3F /* Foundation.framework */; };
 		8B3D73EA89984777E2DFADA9752CCC6C /* UIImage+MultiFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = 3758548AF955C4276975EA2D30DB1EDF /* UIImage+MultiFormat.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8DF2CF92A26181D08D884A0D96CF91A1 /* ZBImageTextEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 28620D324E832E54F183B7B81CD1FB2F /* ZBImageTextEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8ECC564C26A312F1FD36C8B16000DB24 /* SDWebImageCompat.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AEFAC570A229D9EB4C6837DDAD3930B /* SDWebImageCompat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9042DB7BE01532C30841EE9F787942A9 /* SDWebImageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDAFDB5F5302145DDA7AA1272445422 /* SDWebImageManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		91786F07B3F1694594AD1D35D40CA506 /* UIImage+GIF.h in Headers */ = {isa = PBXBuildFile; fileRef = E1F023CAE60111E4BB398BE629FA99B0 /* UIImage+GIF.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -148,20 +152,19 @@
 		92A8BD68D838737D5CFBD858E158493E /* UIButton+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D28848ABB7602F274B673698893FEBE /* UIButton+WebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9453AF29DC26CD6E51980A2F075408CF /* ZBCollectionMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E25B26D855F0DD52B247CAA5EC2986 /* ZBCollectionMaker.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		94799772F413E70BAF265ED9731F6EE2 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC107702149A586933B87DECA51127F /* SDImageCache.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		94C9DBADCBAC43C1E206B753D077B204 /* ZBImageText-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 530A061525E1724BD08755D14AE1891A /* ZBImageText-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		95C42CEF1ED352A7CC7C621F49526EFB /* FBNodeEnumerator.mm in Sources */ = {isa = PBXBuildFile; fileRef = CED088A16AECA8754EF2525C3C655763 /* FBNodeEnumerator.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		96616BEC57708F075AA85411A788BD00 /* UIView+YYText.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC5949E156B169CD429A2AD700DBFB9 /* UIView+YYText.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		97ADB03A33273E5D4FB90AA9B0B43174 /* FBObjectGraphConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8E4EE917DEEBBF32E6CDC1FEE637C0 /* FBObjectGraphConfiguration.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		992393ED3943A8B612F987B49B5B0E17 /* YYTextKeyboardManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A83EAC5B65619357FF381FB73F0B0F2 /* YYTextKeyboardManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		996D8EB8598A276547203EB7C35FBBD7 /* SDWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B953C532AFD335A2615E1B17FA35BA2 /* SDWebImageManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		99D5CA9F09C1EBBD6D00D3E065F1E7D2 /* UITouch+MemoryLeak.h in Headers */ = {isa = PBXBuildFile; fileRef = F9F211102901FE4EEABD8B0F48CC42E7 /* UITouch+MemoryLeak.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		9BD446FDB4DCA5A86D4AFDBBA1801FE7 /* ZBImageText-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0138465092B1EB5E733BE9F3A9B0B4 /* ZBImageText-dummy.m */; };
 		9C0F6653BD20A54EB8AA34C9B2900E73 /* NSButton+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 06200F4E268768E7E959181AFBB9EC8D /* NSButton+WebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9CD60BEAF78F7BAF6A1A73864FD9DE6B /* ZBFancyItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 4351A97A7D79FEE809EDE5E36DC887FF /* ZBFancyItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D4CA28A8EC2259C0467ED10560B9777 /* FBIvarReference.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AF5429CF0A0F27EA9AECE0E37098C07 /* FBIvarReference.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		9D51897D16F2B1B67D5564D3B1362B04 /* SDImageCacheConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 90E3A64A6F01153B1A88B27B3FD535AB /* SDImageCacheConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D51F066D879B44B388E61ABECD35BFE /* YYTextRunDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = F65564C933EC208D7DB9AF6D398E0784 /* YYTextRunDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9DE3BC6140661DF259109AE463389448 /* ZBFancyCollectionView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C71FB4927EF9AAFC09F6C30AFE48FA63 /* ZBFancyCollectionView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9DEACB1F79BD2FBA3D637B8A3FA0E399 /* ZBImageText-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E1B28812C69786068CCA073463A0CB /* ZBImageText-dummy.m */; };
 		A05B322902809F7AD8CFF16030E1E787 /* UIApplication+MemoryLeak.h in Headers */ = {isa = PBXBuildFile; fileRef = A6EE2806639F17683837929E7F1BECD2 /* UIApplication+MemoryLeak.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A0BD31EDD9609EB777F0D460B4F86B04 /* UIImage+MemoryCacheCost.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E1C2DBF78C876200515F8D8C7255F10 /* UIImage+MemoryCacheCost.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A17929459BA52AC98D7C20BDAA97F886 /* FBObjectiveCNSCFTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B628A9F2772FE1207C998B215D7BB3F /* FBObjectiveCNSCFTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -180,12 +183,13 @@
 		AE939D224B51A00C3B65890847F02A32 /* ZBSection.h in Headers */ = {isa = PBXBuildFile; fileRef = 23498D30DD04E6ABA621DF27AD135B44 /* ZBSection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF6C593939A409B01DE931813A838506 /* UIView+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = AA851FEAC7401C4114FEF3FC065EBCA4 /* UIView+WebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF8EBFDF023155D54BAB3DA4D6C52369 /* UIView+WebCacheOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AEBB5BFF4762C0226111272910CFA64 /* UIView+WebCacheOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AFB56353BD3340DBC6FB4960089AC760 /* NSDictionary+ZBImageTextSafe.h in Headers */ = {isa = PBXBuildFile; fileRef = 353608FA1FDB9846B55F15518B57C79B /* NSDictionary+ZBImageTextSafe.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B0CECF00746F166B9528B15C6F3D9F8A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9313F5C4DD4EC067AC862A4C13DE3F /* Foundation.framework */; };
 		B18EA63FA5B7E9547597AE2E8AD45CA2 /* SDWebImageDownloaderOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D6175F605F1D4967A42AD72CC26D652 /* SDWebImageDownloaderOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B1A138942F41F9BE4491A1BDE3D6C93B /* FBAssociationManager+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 340073E2322661F0B56BCD36BDF86E58 /* FBAssociationManager+Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B1F7731172F7A39A4414729716059655 /* FBStructEncodingParser.mm in Sources */ = {isa = PBXBuildFile; fileRef = D663757D8B85165BB0F642966DD74576 /* FBStructEncodingParser.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B355177D467467F5DA2DCAF58F3E7B3C /* FBClassStrongLayoutHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 3184E215EC652AE1C1415E362BB49423 /* FBClassStrongLayoutHelpers.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B50782450A8B9593363997474CD48B4D /* YYLabel+ZBImageTextAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9EE4426770BB244EAC501706B49FF4 /* YYLabel+ZBImageTextAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B829101A711E9D34A1C0512F6711F587 /* ZBImageTextEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 7373B1B5500E7D88F02931D769D99D63 /* ZBImageTextEngine.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B84BD2DBEFD7402A7BDF05CBE5F8251B /* ZBFancyLayoutHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAFB0BB44C3263A993583F6993C1C83 /* ZBFancyLayoutHelper.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B8B2E8DBF86F27C276C3623420C6C8D4 /* UIImage+ForceDecode.h in Headers */ = {isa = PBXBuildFile; fileRef = 77C6734B7290C6B6712E1AA2BDB38EB7 /* UIImage+ForceDecode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B8CA23A473EB679C10ACAB28E5B2BD0D /* FBNodeEnumerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 66900F663A2FFF64EE95AC4019E62C66 /* FBNodeEnumerator.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -203,6 +207,7 @@
 		C445BFD2F7A24AE9E19920AD4B79B8D6 /* YYLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = B3866EA1E6056669ED62CE9DF906AC4C /* YYLabel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		C6CA6D83A5E940A7B7605211E4149E66 /* ZBCollectionProtoFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = D043BCD51858F1E71A5B4A14EE93E7F0 /* ZBCollectionProtoFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C863CE6FD4CE15825D8BAB1228EFF63C /* YYTextRubyAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = 082FC913656FC2DD81C8774FC39F6A07 /* YYTextRubyAnnotation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C8A585B79E7C6FF44F62AC00D4610C24 /* ZBImageText-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E337853C510CA0686F125C4E3E24E0DF /* ZBImageText-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CC0E844325FD778A6AC6B566568BB6F2 /* UIViewController+MemoryLeak.h in Headers */ = {isa = PBXBuildFile; fileRef = E6B84F6667898DB72B049EC7433F898F /* UIViewController+MemoryLeak.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		CE476757ACF632E4E47B089CC567F1F3 /* FBObjectiveCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB5749AEEF61312E651A5B2D29FB0BA /* FBObjectiveCObject.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		CE74FE53F02A640F8331D96E2C7AE09B /* YYTextLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A5E07AA642E56BAB24216587C827FC3 /* YYTextLayout.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -210,7 +215,6 @@
 		CF21B2F1841C68A82F29B8AA64CC6126 /* NSImage+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BC69676F2DAB6A6BCBED7747FDDE6C2 /* NSImage+WebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D20E9CF99AE790EE45A03985D8A29D13 /* SDWebImageFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 2674BF9B12E91CCFCE2E8179B86C6DDA /* SDWebImageFrame.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D2807C810F81619A5682A43938727687 /* NSAttributedString+YYText.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CF61E21E4CA965BFF2E69ED61A551A9 /* NSAttributedString+YYText.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D3204C3B0E849EC4B74164242927061E /* ZBImageTextEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 093F4C2EAD8DC2C71CCEBAD987754D79 /* ZBImageTextEngine.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D35F2ADB3CA42D406EF97B3A0909886C /* FBBlockStrongRelationDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B7981076140E07BFFF89FCB0ECAB555 /* FBBlockStrongRelationDetector.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D36EEC300BA9FE5D9963102FB3F8386F /* YYTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B5C89F8D9E0E4AE7DCD5C30B8F5CD95 /* YYTextView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D385A2B5ABC8E2E96F9D03F4BE4F7574 /* YYTextAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = F174E7621319738C78BC3D1134E4D264 /* YYTextAttribute.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -221,23 +225,21 @@
 		DD091D991AEBF2F2E41E4F65575DA478 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54215B051DE089F14BDF17E8322604A4 /* QuartzCore.framework */; };
 		DD11AA26497E6DE909A13F286251C5E2 /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = F0C57A819D4ED294839212E7AF47FB3F /* fishhook.c */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		DD1CBB57ADDBF59BB964078F500BEFEC /* MLeakedObjectProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 083FE1D2321A8CF78177F5C570F34955 /* MLeakedObjectProxy.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		DE2CB07AF37DE05011BC2921EA0BD4DC /* NSDictionary+ZBImageTextSafe.h in Headers */ = {isa = PBXBuildFile; fileRef = B277D88E5A2E336FC75723202AB6045D /* NSDictionary+ZBImageTextSafe.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DF9157F5F989AD11AC1519C5729C412A /* UIView+YYText.h in Headers */ = {isa = PBXBuildFile; fileRef = C69F87B45A6F3E5FEA1269885DFC78FC /* UIView+YYText.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DFE0213496247DF2C1DBD39EB3B79C2E /* ZBFancyCollectionData.h in Headers */ = {isa = PBXBuildFile; fileRef = 41B4DC05600843BD00EDF32C8DCC0393 /* ZBFancyCollectionData.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E0F1CE36F2492FE7C51BDF0AF9E1EC43 /* YYLabel+ZBImageTextAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B0EB1405F4E42F9B92AB6EEA54398DCD /* YYLabel+ZBImageTextAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E2ED2107D202C15FBD80CE76C420806E /* ZBSection.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD60427560FB9FFAB8643CE78B18B9C /* ZBSection.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		E3610F4D55C3FD92D108D36A90198793 /* NSDictionary+ZBImageTextSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = FE5D01E6C31264F44D62941BFC448884 /* NSDictionary+ZBImageTextSafe.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E3AE9B11676C0531A0370671FFA3F2E0 /* FBObjectiveCGraphElement+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = C8F3DB94A6953CAB65EDAB692CE4F3DF /* FBObjectiveCGraphElement+Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E3E1FC697553D44FB61DBC3398B72E61 /* YYLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 56990441A575C3CFA06AE2D8C992FD61 /* YYLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E45F92C4F31834E03D2B741B80698820 /* ZBFancyLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E561C407575111EEF56065FD356C37E /* ZBFancyLayout.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E55B8FCE0DE71648A7D8F0B88B109DA7 /* UITouch+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C47AD5B171E9C5C42E8FEF2B031634 /* UITouch+MemoryLeak.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E5C8E1C75250E1B7F0C57471280628FB /* YYTextLine.h in Headers */ = {isa = PBXBuildFile; fileRef = 698C6B951383F806D17D5145C4AD88FA /* YYTextLine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E65B610A748F20456DE22980A5D758E2 /* ZBImageText.h in Headers */ = {isa = PBXBuildFile; fileRef = 55C3B79CEA2F59977760481C3FBDBC68 /* ZBImageText.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E6E07742C827EFAFC91B80F00642D2DC /* YYTextWeakProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = A756C105EA6C7A2F42F3F471EB7FDCA5 /* YYTextWeakProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E7AC09B491D52FB8AF2CED66533F7205 /* Struct.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8215B7D6A6A48CD7C50EA3DE7C4246B5 /* Struct.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E82EC1FCF0E566F14F316978272B9D47 /* ZBCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C80B18593848E41C1C978AB1112E8A /* ZBCollectionViewDataSource.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E876E73BC9AE21FAB6C563C5184E3CC9 /* YYLabel+ZBImageTextAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEAB7CF3DABD633C0916B164E0AB367 /* YYLabel+ZBImageTextAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E96E34C57823608E480A57B2BDDDB6AA /* NSImage+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D38F076B1EA77A58E5CABA59714F0B /* NSImage+WebCache.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E97ADF914424EB4DE5AA70319A5EA031 /* UISplitViewController+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 940C192FD2CB3729E457BAB9EC5777A7 /* UISplitViewController+MemoryLeak.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		EA1203B1AF3C3BED8EC04EC554DA4D6F /* ZBImageTextMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFFC860870F7FF10E0E40E3E4368FA2 /* ZBImageTextMaker.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		EA3EC3F20803745461A13A5C223A9183 /* UICollectionView+ZBFancy.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FFC787DA11D1882AE47F232106A8493 /* UICollectionView+ZBFancy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EB165D7A4E3F83BD350848894615F27F /* UIPasteboard+YYText.m in Sources */ = {isa = PBXBuildFile; fileRef = 267F85547A592C0B53495B69F810553C /* UIPasteboard+YYText.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		EB8AFA84C9D9F258BB1A3FC97CB320E5 /* YYTextSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0022AB461737080B3CBC82AFDF366422 /* YYTextSelectionView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -247,8 +249,8 @@
 		EEE2532B457947E89F27792F62E6666B /* YYText.h in Headers */ = {isa = PBXBuildFile; fileRef = 1945287052AC7E82B0B832F06EA3911A /* YYText.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F191EFA81BF04155E1FAAD0F0542709A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4370E2BDC346F6CDDEB5B7715B7BA66 /* CoreGraphics.framework */; };
 		F251562CF962A4CE1E615AC3FE3208F8 /* FBIvarReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B9ED350B633A7AC7A3BA67A4C9D1A1 /* FBIvarReference.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F35D21D851C3F57F8D30C795BA11D2E4 /* NSDictionary+ZBImageTextSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = C188F4E6C986183EA8698ECCED5DCB0A /* NSDictionary+ZBImageTextSafe.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F399D97A8A7D9FE403E04B7320A11505 /* YYTextArchiver.h in Headers */ = {isa = PBXBuildFile; fileRef = E087E5ED9D59C4A576B5624852CC367A /* YYTextArchiver.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F42E19C67727C7B140850CE27648720B /* ZBImageTextMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = 812DA1C79069FFB505EE44113A2EF9E9 /* ZBImageTextMaker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F4B970944215038EFB41C0118546D27C /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0744BEFB85FDA6D8AB8CCCE8DE1D8606 /* SDWebImage.framework */; };
 		F568D0BC4D50DF1F27F616E48C18AB30 /* YYTextDebugOption.h in Headers */ = {isa = PBXBuildFile; fileRef = F7FE276D40D4DE3D97AD7C77AFA0B0E7 /* YYTextDebugOption.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F7C1329FFFBA7500CF6961E41E8C6BA2 /* MLeaksFinder.h in Headers */ = {isa = PBXBuildFile; fileRef = FCDFE315E277834F3BA33B2446FD7E3D /* MLeaksFinder.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -343,18 +345,16 @@
 		082FC913656FC2DD81C8774FC39F6A07 /* YYTextRubyAnnotation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYTextRubyAnnotation.h; path = YYText/String/YYTextRubyAnnotation.h; sourceTree = "<group>"; };
 		0834D5AA9B976B843140B04B52E60434 /* NSObject+MemoryLeak.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MemoryLeak.h"; path = "MLeaksFinder/NSObject+MemoryLeak.h"; sourceTree = "<group>"; };
 		083FE1D2321A8CF78177F5C570F34955 /* MLeakedObjectProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MLeakedObjectProxy.h; path = MLeaksFinder/MLeakedObjectProxy.h; sourceTree = "<group>"; };
-		093F4C2EAD8DC2C71CCEBAD987754D79 /* ZBImageTextEngine.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZBImageTextEngine.m; path = ZBImageText/Classes/ZBImageTextEngine.m; sourceTree = "<group>"; };
 		09F0C9D492F7AFEA26CF1484DD0EC5FD /* YYText-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YYText-prefix.pch"; sourceTree = "<group>"; };
-		0B86DFC897A1866D5CF451B7B9CB802C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F6361BDA1FDA61AB5624F1C598B8F29 /* FBBlockStrongLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBBlockStrongLayout.h; path = FBRetainCycleDetector/Layout/Blocks/FBBlockStrongLayout.h; sourceTree = "<group>"; };
 		107480EEE26241C15A44954ED6BF6730 /* SDImageCacheConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCacheConfig.m; path = SDWebImage/SDImageCacheConfig.m; sourceTree = "<group>"; };
 		109A1F8D4219D00AEA0EA549895E3DD8 /* SDWebImageDownloader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloader.h; path = SDWebImage/SDWebImageDownloader.h; sourceTree = "<group>"; };
 		109C1A0345F35292406A83B1B6D100F2 /* FBClassStrongLayoutHelpers.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBClassStrongLayoutHelpers.m; path = FBRetainCycleDetector/Layout/Classes/FBClassStrongLayoutHelpers.m; sourceTree = "<group>"; };
 		124A5E75210BDA6463185E7F1DD04E99 /* SDWebImageOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageOperation.h; path = SDWebImage/SDWebImageOperation.h; sourceTree = "<group>"; };
 		1273B0982B6B137A220C12800CF5A436 /* FBObjectiveCGraphElement.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = FBObjectiveCGraphElement.mm; path = FBRetainCycleDetector/Graph/FBObjectiveCGraphElement.mm; sourceTree = "<group>"; };
-		1465AC0288D31FDFE9DFBB94E9BC97B5 /* ZBImageText.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ZBImageText.modulemap; sourceTree = "<group>"; };
 		15D578DBFA185D9681DA3F218B0A1D0B /* SDWebImageCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageCoder.m; path = SDWebImage/SDWebImageCoder.m; sourceTree = "<group>"; };
 		15DC1F187E854391AD146F1D37596FD9 /* MLeaksFinder.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MLeaksFinder.modulemap; sourceTree = "<group>"; };
+		16265ABC9D0F40A8F5876DC989FF62D1 /* ZBImageText.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ZBImageText.modulemap; sourceTree = "<group>"; };
 		1684D7AC853B115F2F2B6155D66C4BD7 /* YYTextInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYTextInput.h; path = YYText/Component/YYTextInput.h; sourceTree = "<group>"; };
 		16F1372F56DCDB1B6449C568C40896B7 /* YYTextEffectWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYTextEffectWindow.m; path = YYText/Component/YYTextEffectWindow.m; sourceTree = "<group>"; };
 		1745BDA4FFCF929FDF9D2CAD1194645E /* UIView+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+WebCache.m"; path = "SDWebImage/UIView+WebCache.m"; sourceTree = "<group>"; };
@@ -367,7 +367,6 @@
 		20BD6B95E3FBBE8D9E4C31A680EA3A8E /* UIApplication+MemoryLeak.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+MemoryLeak.m"; path = "MLeaksFinder/UIApplication+MemoryLeak.m"; sourceTree = "<group>"; };
 		20C999DFA3EAAF99CCD1E823F54479C9 /* ZBFancyCollectionViewPrefixHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZBFancyCollectionViewPrefixHeader.h; path = ZBFancyCollectionView/Classes/ZBFancyCollectionViewPrefixHeader.h; sourceTree = "<group>"; };
 		23498D30DD04E6ABA621DF27AD135B44 /* ZBSection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZBSection.h; path = ZBFancyCollectionView/Classes/Fancy/ZBSection.h; sourceTree = "<group>"; };
-		23EF85B939D3DEC24895C7E159E9D0FE /* ZBImageText.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZBImageText.m; path = ZBImageText/Classes/ZBImageText.m; sourceTree = "<group>"; };
 		2414AC804BD92157DB37BD08B37AB185 /* YYTextContainerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYTextContainerView.m; path = YYText/Component/YYTextContainerView.m; sourceTree = "<group>"; };
 		2578DE44FCE3BC8271022DFB5EE74DC0 /* SDWebImageDownloader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloader.m; path = SDWebImage/SDWebImageDownloader.m; sourceTree = "<group>"; };
 		2674BF9B12E91CCFCE2E8179B86C6DDA /* SDWebImageFrame.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageFrame.m; path = SDWebImage/SDWebImageFrame.m; sourceTree = "<group>"; };
@@ -376,7 +375,6 @@
 		27DEFDCAEE17EF3E656B21436F3DC7C6 /* FBRetainCycleDetector+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBRetainCycleDetector+Internal.h"; path = "FBRetainCycleDetector/Detector/FBRetainCycleDetector+Internal.h"; sourceTree = "<group>"; };
 		282389DDB80D1C9C6549C45531659DA5 /* MLeaksFinder.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MLeaksFinder.xcconfig; sourceTree = "<group>"; };
 		285F602039735E246E438984B3CC1ED1 /* Pods-ZBImageText_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ZBImageText_Example-frameworks.sh"; sourceTree = "<group>"; };
-		28620D324E832E54F183B7B81CD1FB2F /* ZBImageTextEngine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZBImageTextEngine.h; path = ZBImageText/Classes/ZBImageTextEngine.h; sourceTree = "<group>"; };
 		29050C5440A286B44B83542061CEEF7F /* YYTextAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYTextAttribute.h; path = YYText/String/YYTextAttribute.h; sourceTree = "<group>"; };
 		29A783EA120CBE26A8658A7498763D5E /* YYText.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = YYText.framework; path = YYText.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A29A6D61EB2ED73B25C80F60800E379 /* FBRetainCycleDetector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBRetainCycleDetector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -396,6 +394,7 @@
 		33F566AF16CB2F4BFD471077EBB0CD91 /* UIImageView+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+WebCache.h"; path = "SDWebImage/UIImageView+WebCache.h"; sourceTree = "<group>"; };
 		340073E2322661F0B56BCD36BDF86E58 /* FBAssociationManager+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBAssociationManager+Internal.h"; path = "FBRetainCycleDetector/Associations/Internal/FBAssociationManager+Internal.h"; sourceTree = "<group>"; };
 		34D6045CBAE40E62A8B39B085D04CCFF /* Pods-ZBImageText_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZBImageText_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		353608FA1FDB9846B55F15518B57C79B /* NSDictionary+ZBImageTextSafe.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+ZBImageTextSafe.h"; path = "ZBImageText/Classes/NSDictionary+ZBImageTextSafe.h"; sourceTree = "<group>"; };
 		3758548AF955C4276975EA2D30DB1EDF /* UIImage+MultiFormat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+MultiFormat.h"; path = "SDWebImage/UIImage+MultiFormat.h"; sourceTree = "<group>"; };
 		3779A652156458E541F9CFC6212E1E3A /* FBObjectInStructReference.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBObjectInStructReference.h; path = FBRetainCycleDetector/Layout/Classes/Reference/FBObjectInStructReference.h; sourceTree = "<group>"; };
 		3A7F730CB3CA2788E2E0991A264E20F4 /* YYText.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YYText.xcconfig; sourceTree = "<group>"; };
@@ -419,39 +418,38 @@
 		4D28848ABB7602F274B673698893FEBE /* UIButton+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+WebCache.h"; path = "SDWebImage/UIButton+WebCache.h"; sourceTree = "<group>"; };
 		50417014A6D70232836203DA7F03DF83 /* YYText-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YYText-umbrella.h"; sourceTree = "<group>"; };
 		52AD21B3749B22C6633822102DD9C452 /* SDWebImageDownloaderOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloaderOperation.m; path = SDWebImage/SDWebImageDownloaderOperation.m; sourceTree = "<group>"; };
-		530A061525E1724BD08755D14AE1891A /* ZBImageText-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZBImageText-umbrella.h"; sourceTree = "<group>"; };
 		5312D14A70FB894F0238ABBEA913888B /* Pods-ZBImageText_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ZBImageText_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5328E0DACFBF09AE3531DDE5CA0B4527 /* FBBlockStrongLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBBlockStrongLayout.m; path = FBRetainCycleDetector/Layout/Blocks/FBBlockStrongLayout.m; sourceTree = "<group>"; };
 		54215B051DE089F14BDF17E8322604A4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		55C3B79CEA2F59977760481C3FBDBC68 /* ZBImageText.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZBImageText.h; path = ZBImageText/Classes/ZBImageText.h; sourceTree = "<group>"; };
 		55C730402674BD34C719B27B95B8B0AE /* MLeakedObjectProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MLeakedObjectProxy.m; path = MLeaksFinder/MLeakedObjectProxy.m; sourceTree = "<group>"; };
 		56990441A575C3CFA06AE2D8C992FD61 /* YYLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYLabel.h; path = YYText/YYLabel.h; sourceTree = "<group>"; };
 		58D38F076B1EA77A58E5CABA59714F0B /* NSImage+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSImage+WebCache.m"; path = "SDWebImage/NSImage+WebCache.m"; sourceTree = "<group>"; };
 		58EC29F7ABBAE8FB29151B1E9941AC0B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		590209A77C75AED148A6C6675D556700 /* NSArray+ZBBlockKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+ZBBlockKit.h"; path = "ZBFancyCollectionView/Classes/Category/NSArray+ZBBlockKit.h"; sourceTree = "<group>"; };
-		596E775BB51387BD80D0775B67FBDA46 /* ZBImageText.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZBImageText.h; path = ZBImageText/Classes/ZBImageText.h; sourceTree = "<group>"; };
 		59E18DA9B02369DDA0C823727F9BF745 /* fishhook.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = fishhook.h; path = fishhook/fishhook.h; sourceTree = "<group>"; };
 		59FF10107C54190AA6D3C22C119D0CC3 /* NSParagraphStyle+YYText.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSParagraphStyle+YYText.h"; path = "YYText/Utility/NSParagraphStyle+YYText.h"; sourceTree = "<group>"; };
-		5A52FF8D08E775B317750749CCB6F474 /* ZBImageText-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZBImageText-prefix.pch"; sourceTree = "<group>"; };
 		5B5B917D945725822204A1204B1BF395 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreFoundation.framework; sourceTree = DEVELOPER_DIR; };
 		5BC107702149A586933B87DECA51127F /* SDImageCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCache.m; path = SDWebImage/SDImageCache.m; sourceTree = "<group>"; };
 		5C379BD34D1D670D2F557C68C235D8B1 /* UIViewController+MemoryLeak.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+MemoryLeak.m"; path = "MLeaksFinder/UIViewController+MemoryLeak.m"; sourceTree = "<group>"; };
 		5C79A197E90CF9EB03A19A2D870BB876 /* FBRetainCycleDetector.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBRetainCycleDetector.xcconfig; sourceTree = "<group>"; };
 		5D1DA80A7DEE878480F82DF4AC6A4F9E /* Pods-ZBImageText_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ZBImageText_Example-dummy.m"; sourceTree = "<group>"; };
 		5D6175F605F1D4967A42AD72CC26D652 /* SDWebImageDownloaderOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloaderOperation.h; path = SDWebImage/SDWebImageDownloaderOperation.h; sourceTree = "<group>"; };
-		5DFFC860870F7FF10E0E40E3E4368FA2 /* ZBImageTextMaker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZBImageTextMaker.m; path = ZBImageText/Classes/ZBImageTextMaker.m; sourceTree = "<group>"; };
 		61EED74C4C77216B4E07A3FF6C01257F /* NSData+ImageContentType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+ImageContentType.h"; path = "SDWebImage/NSData+ImageContentType.h"; sourceTree = "<group>"; };
+		62312850AEE1FF9B61236CCD020C1D60 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		62571E9642A7D2D5DBC0C3FB54FA18D1 /* UIImage+MemoryCacheCost.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+MemoryCacheCost.m"; path = "SDWebImage/UIImage+MemoryCacheCost.m"; sourceTree = "<group>"; };
 		628018480AB795E446B92676013404E3 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
 		662D14CCC4A70ED5E6A5320D74700860 /* SDWebImageImageIOCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageImageIOCoder.m; path = SDWebImage/SDWebImageImageIOCoder.m; sourceTree = "<group>"; };
 		667E6B32909B9A9E49E662D00099E36B /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
 		66900F663A2FFF64EE95AC4019E62C66 /* FBNodeEnumerator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBNodeEnumerator.h; path = FBRetainCycleDetector/Detector/FBNodeEnumerator.h; sourceTree = "<group>"; };
 		6842DB21483E7C32772E0EFD0F9D6319 /* ZBFancyCollectionView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ZBFancyCollectionView.modulemap; sourceTree = "<group>"; };
+		68E67CAA2BAAA03BE01C2AAC3DA7484B /* ZBImageTextMaker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZBImageTextMaker.h; path = ZBImageText/Classes/ZBImageTextMaker.h; sourceTree = "<group>"; };
 		698C6B951383F806D17D5145C4AD88FA /* YYTextLine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYTextLine.h; path = YYText/Component/YYTextLine.h; sourceTree = "<group>"; };
 		6A5E07AA642E56BAB24216587C827FC3 /* YYTextLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYTextLayout.m; path = YYText/Component/YYTextLayout.m; sourceTree = "<group>"; };
 		6AEBB5BFF4762C0226111272910CFA64 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+WebCacheOperation.h"; path = "SDWebImage/UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		6AF5429CF0A0F27EA9AECE0E37098C07 /* FBIvarReference.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBIvarReference.h; path = FBRetainCycleDetector/Layout/Classes/Reference/FBIvarReference.h; sourceTree = "<group>"; };
-		6BBD19A4C2FA61FB0C8347F03DAF18B8 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		6BF38FF87B9D54E30575CA0DCAEA941E /* MLeaksFinder-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MLeaksFinder-umbrella.h"; sourceTree = "<group>"; };
+		6C8E2D91CA4F24306E17C426BE860933 /* ZBImageTextEngine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZBImageTextEngine.h; path = ZBImageText/Classes/ZBImageTextEngine.h; sourceTree = "<group>"; };
 		6CC873DE9771ED503351B93BFD270D2D /* FBBlockInterface.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBBlockInterface.h; path = FBRetainCycleDetector/Layout/Blocks/FBBlockInterface.h; sourceTree = "<group>"; };
 		7100DA90237C4C58A4CC752F884B5849 /* FBObjectReference.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBObjectReference.h; path = FBRetainCycleDetector/Layout/Classes/Reference/FBObjectReference.h; sourceTree = "<group>"; };
 		7171E484FB5389D9CFD2F68C5BCE4DF3 /* UIPageViewController+MemoryLeak.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIPageViewController+MemoryLeak.h"; path = "MLeaksFinder/UIPageViewController+MemoryLeak.h"; sourceTree = "<group>"; };
@@ -459,6 +457,7 @@
 		7210E82239D39F346092DB1ED0DE9023 /* FBStructEncodingParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBStructEncodingParser.h; path = FBRetainCycleDetector/Layout/Classes/Parser/FBStructEncodingParser.h; sourceTree = "<group>"; };
 		72AA8EA86E9AE28DA8C4C9F9A6245142 /* NSButton+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSButton+WebCache.m"; path = "SDWebImage/NSButton+WebCache.m"; sourceTree = "<group>"; };
 		7339798DB9A43A3576F5371831552B22 /* FBObjectiveCNSCFTimer.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = FBObjectiveCNSCFTimer.mm; path = FBRetainCycleDetector/Graph/Specialization/FBObjectiveCNSCFTimer.mm; sourceTree = "<group>"; };
+		7373B1B5500E7D88F02931D769D99D63 /* ZBImageTextEngine.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZBImageTextEngine.m; path = ZBImageText/Classes/ZBImageTextEngine.m; sourceTree = "<group>"; };
 		747AE1D2B167A88E0C304330BCA7672C /* FBRetainCycleDetector-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBRetainCycleDetector-umbrella.h"; sourceTree = "<group>"; };
 		75CD5B520190C320FB83C80323AF4913 /* UIImage+MultiFormat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+MultiFormat.m"; path = "SDWebImage/UIImage+MultiFormat.m"; sourceTree = "<group>"; };
 		77C6734B7290C6B6712E1AA2BDB38EB7 /* UIImage+ForceDecode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+ForceDecode.h"; path = "SDWebImage/UIImage+ForceDecode.h"; sourceTree = "<group>"; };
@@ -471,12 +470,13 @@
 		7B7981076140E07BFFF89FCB0ECAB555 /* FBBlockStrongRelationDetector.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBBlockStrongRelationDetector.m; path = FBRetainCycleDetector/Layout/Blocks/FBBlockStrongRelationDetector.m; sourceTree = "<group>"; };
 		7BE28B2C0D0FDBED9A0F7171B60B4BFD /* ZBCollectionProtoFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZBCollectionProtoFactory.m; path = ZBFancyCollectionView/Classes/Fancy/ZBCollectionProtoFactory.m; sourceTree = "<group>"; };
 		7C0CDE051940031C2F21F6AD7A07F0BA /* MLeaksMessenger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MLeaksMessenger.m; path = MLeaksFinder/MLeaksMessenger.m; sourceTree = "<group>"; };
+		7DF5FA778719D292A12800192DFCB26D /* ZBImageText.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZBImageText.m; path = ZBImageText/Classes/ZBImageText.m; sourceTree = "<group>"; };
 		7E001C61B93C8D1F77C769C92CA73578 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+WebCacheOperation.m"; path = "SDWebImage/UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		7E6484A34C9FBF1626C38FD4038AF089 /* ZBImageTextUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZBImageTextUtilities.m; path = ZBImageText/Classes/ZBImageTextUtilities.m; sourceTree = "<group>"; };
 		8011DA37DF677ACAAA09D741F1524ED0 /* YYTextRubyAnnotation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYTextRubyAnnotation.m; path = YYText/String/YYTextRubyAnnotation.m; sourceTree = "<group>"; };
 		8049B756F35AF72DA9E6E7E58FE7C275 /* Pods-ZBImageText_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ZBImageText_Example.modulemap"; sourceTree = "<group>"; };
 		806020A8CE1AFE3F3DBCD03FF9673B31 /* SDWebImageTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageTransition.h; path = SDWebImage/SDWebImageTransition.h; sourceTree = "<group>"; };
 		811D5CC7FAFFFC09AEED6245EEF446CE /* FBStandardGraphEdgeFilters.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = FBStandardGraphEdgeFilters.mm; path = FBRetainCycleDetector/Filtering/FBStandardGraphEdgeFilters.mm; sourceTree = "<group>"; };
-		812DA1C79069FFB505EE44113A2EF9E9 /* ZBImageTextMaker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZBImageTextMaker.h; path = ZBImageText/Classes/ZBImageTextMaker.h; sourceTree = "<group>"; };
 		8215B7D6A6A48CD7C50EA3DE7C4246B5 /* Struct.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = Struct.mm; path = FBRetainCycleDetector/Layout/Classes/Parser/Struct.mm; sourceTree = "<group>"; };
 		82533DEBBD52DFB6640079B563398FEF /* YYTextWeakProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYTextWeakProxy.m; path = YYText/Utility/YYTextWeakProxy.m; sourceTree = "<group>"; };
 		8445016552114A86FE479D798F9D9823 /* SDWebImage.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SDWebImage.modulemap; sourceTree = "<group>"; };
@@ -486,6 +486,7 @@
 		89C6ED215B4BB27F21A1290CA07A52F9 /* UIPasteboard+YYText.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIPasteboard+YYText.h"; path = "YYText/Utility/UIPasteboard+YYText.h"; sourceTree = "<group>"; };
 		8A20C97B7D43D1C7E9417EF47B7E2AA0 /* YYText.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = YYText.modulemap; sourceTree = "<group>"; };
 		8B00AFFB81FF4A4AB4E8B155AAA3DDE0 /* SDWebImage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SDWebImage.xcconfig; sourceTree = "<group>"; };
+		8B720C31889955544183DC8ABFCD8B1A /* ZBImageTextUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZBImageTextUtilities.h; path = ZBImageText/Classes/ZBImageTextUtilities.h; sourceTree = "<group>"; };
 		8B953C532AFD335A2615E1B17FA35BA2 /* SDWebImageManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageManager.m; path = SDWebImage/SDWebImageManager.m; sourceTree = "<group>"; };
 		8D00CA8E2BA69E7FA8D7469521F300AA /* FBObjectiveCBlock.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBObjectiveCBlock.m; path = FBRetainCycleDetector/Graph/FBObjectiveCBlock.m; sourceTree = "<group>"; };
 		8EDE46CDF25D8813C5AC052CEC4F8D5F /* UIImageView+HighlightedWebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+HighlightedWebCache.m"; path = "SDWebImage/UIImageView+HighlightedWebCache.m"; sourceTree = "<group>"; };
@@ -498,10 +499,10 @@
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		940C192FD2CB3729E457BAB9EC5777A7 /* UISplitViewController+MemoryLeak.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UISplitViewController+MemoryLeak.m"; path = "MLeaksFinder/UISplitViewController+MemoryLeak.m"; sourceTree = "<group>"; };
 		97B44121E1A37375F09DF06D66A55242 /* UINavigationController+MemoryLeak.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+MemoryLeak.h"; path = "MLeaksFinder/UINavigationController+MemoryLeak.h"; sourceTree = "<group>"; };
-		99BFF2D297FBFA8C9145D4AEBAE1C074 /* ZBImageText.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZBImageText.xcconfig; sourceTree = "<group>"; };
 		9A83EAC5B65619357FF381FB73F0B0F2 /* YYTextKeyboardManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYTextKeyboardManager.h; path = YYText/Component/YYTextKeyboardManager.h; sourceTree = "<group>"; };
 		9ADC89A2D9F11A784F7F7BEBDD4C8222 /* ZBFancyCollectionData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZBFancyCollectionData.m; path = ZBFancyCollectionView/Classes/Fancy/ZBFancyCollectionData.m; sourceTree = "<group>"; };
 		9BC69676F2DAB6A6BCBED7747FDDE6C2 /* NSImage+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSImage+WebCache.h"; path = "SDWebImage/NSImage+WebCache.h"; sourceTree = "<group>"; };
+		9CEAB7CF3DABD633C0916B164E0AB367 /* YYLabel+ZBImageTextAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "YYLabel+ZBImageTextAdditions.m"; path = "ZBImageText/Classes/YYLabel+ZBImageTextAdditions.m"; sourceTree = "<group>"; };
 		9EB50735A959332F6721758B38C341E0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F52647048CFD4921A385363834C9AD0 /* YYTextView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYTextView.h; path = YYText/YYTextView.h; sourceTree = "<group>"; };
 		9F8E4EE917DEEBBF32E6CDC1FEE637C0 /* FBObjectGraphConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBObjectGraphConfiguration.m; path = FBRetainCycleDetector/Graph/FBObjectGraphConfiguration.m; sourceTree = "<group>"; };
@@ -513,17 +514,16 @@
 		A60E146BFBED1B455CC9483D1F38C7C7 /* FBBlockStrongRelationDetector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBBlockStrongRelationDetector.h; path = FBRetainCycleDetector/Layout/Blocks/FBBlockStrongRelationDetector.h; sourceTree = "<group>"; };
 		A650FD47497FCEF65BDA87CACB792403 /* UITabBarController+MemoryLeak.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITabBarController+MemoryLeak.h"; path = "MLeaksFinder/UITabBarController+MemoryLeak.h"; sourceTree = "<group>"; };
 		A6EE2806639F17683837929E7F1BECD2 /* UIApplication+MemoryLeak.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+MemoryLeak.h"; path = "MLeaksFinder/UIApplication+MemoryLeak.h"; sourceTree = "<group>"; };
+		A72F9CC76FDD648702F5920E16F6C221 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		A756C105EA6C7A2F42F3F471EB7FDCA5 /* YYTextWeakProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYTextWeakProxy.h; path = YYText/Utility/YYTextWeakProxy.h; sourceTree = "<group>"; };
 		A7C51287984D9C038E89DAA0E5DAB72E /* SDWebImageImageIOCoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageImageIOCoder.h; path = SDWebImage/SDWebImageImageIOCoder.h; sourceTree = "<group>"; };
-		A8A1546C0B3B1833763AA29EEA8E551E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		AA851FEAC7401C4114FEF3FC065EBCA4 /* UIView+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+WebCache.h"; path = "SDWebImage/UIView+WebCache.h"; sourceTree = "<group>"; };
 		AAAFA8E4C2CED5E41C8996FCFF7CE345 /* FBClassStrongLayout.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = FBClassStrongLayout.mm; path = FBRetainCycleDetector/Layout/Classes/FBClassStrongLayout.mm; sourceTree = "<group>"; };
 		AD1D172941E8C7161EA3913A39A64A0F /* MLeaksFinder-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MLeaksFinder-prefix.pch"; sourceTree = "<group>"; };
 		AF9EAD07FE8203380730D810740FBC21 /* FBRetainCycleDetector-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBRetainCycleDetector-prefix.pch"; sourceTree = "<group>"; };
 		B06591C05332A98626CE67886EA5F72E /* Type.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Type.h; path = FBRetainCycleDetector/Layout/Classes/Parser/Type.h; sourceTree = "<group>"; };
-		B0EB1405F4E42F9B92AB6EEA54398DCD /* YYLabel+ZBImageTextAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "YYLabel+ZBImageTextAdditions.h"; path = "ZBImageText/Classes/YYLabel+ZBImageTextAdditions.h"; sourceTree = "<group>"; };
+		B0EA7CB3DF435AF68E4660D3CEB709C9 /* ZBImageText.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = ZBImageText.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B2026200942F5E2E7089180403B700B5 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+WebCache.m"; path = "SDWebImage/UIImageView+WebCache.m"; sourceTree = "<group>"; };
-		B277D88E5A2E336FC75723202AB6045D /* NSDictionary+ZBImageTextSafe.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+ZBImageTextSafe.h"; path = "ZBImageText/Classes/NSDictionary+ZBImageTextSafe.h"; sourceTree = "<group>"; };
 		B2F454D443F182C0E13816D21E641493 /* YYTextContainerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYTextContainerView.h; path = YYText/Component/YYTextContainerView.h; sourceTree = "<group>"; };
 		B3866EA1E6056669ED62CE9DF906AC4C /* YYLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYLabel.m; path = YYText/YYLabel.m; sourceTree = "<group>"; };
 		B5231B7F1763D132EF83B2199592D311 /* SDWebImage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDWebImage-prefix.pch"; sourceTree = "<group>"; };
@@ -534,13 +534,14 @@
 		B9702646D42D354E2E2F32BF561829D0 /* SDWebImageTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageTransition.m; path = SDWebImage/SDWebImageTransition.m; sourceTree = "<group>"; };
 		BAF2852FE7EC83C94CFCC3960D126962 /* YYTextArchiver.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYTextArchiver.m; path = YYText/String/YYTextArchiver.m; sourceTree = "<group>"; };
 		BB957D375E6E18F1EE343E7532D1BF4B /* YYTextEffectWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYTextEffectWindow.h; path = YYText/Component/YYTextEffectWindow.h; sourceTree = "<group>"; };
-		BD9EE4426770BB244EAC501706B49FF4 /* YYLabel+ZBImageTextAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "YYLabel+ZBImageTextAdditions.m"; path = "ZBImageText/Classes/YYLabel+ZBImageTextAdditions.m"; sourceTree = "<group>"; };
 		BDFB574993A5809D8182DC8A6D3B9B29 /* SDWebImage-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDWebImage-umbrella.h"; sourceTree = "<group>"; };
 		BE29CC611909343AB10E113B579AF403 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE6E0812CF28FFFB865788DBF812DCF9 /* UIPageViewController+MemoryLeak.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIPageViewController+MemoryLeak.m"; path = "MLeaksFinder/UIPageViewController+MemoryLeak.m"; sourceTree = "<group>"; };
 		BEC5949E156B169CD429A2AD700DBFB9 /* UIView+YYText.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+YYText.m"; path = "YYText/Utility/UIView+YYText.m"; sourceTree = "<group>"; };
+		BEF5F3A1585BF19909F456DE372D020A /* YYLabel+ZBImageTextAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "YYLabel+ZBImageTextAdditions.h"; path = "ZBImageText/Classes/YYLabel+ZBImageTextAdditions.h"; sourceTree = "<group>"; };
 		BFAFB0BB44C3263A993583F6993C1C83 /* ZBFancyLayoutHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZBFancyLayoutHelper.m; path = ZBFancyCollectionView/Classes/Layout/ZBFancyLayoutHelper.m; sourceTree = "<group>"; };
 		C053E7E3B145339BD2E3F96AC3DC2D83 /* UINavigationController+MemoryLeak.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+MemoryLeak.m"; path = "MLeaksFinder/UINavigationController+MemoryLeak.m"; sourceTree = "<group>"; };
+		C188F4E6C986183EA8698ECCED5DCB0A /* NSDictionary+ZBImageTextSafe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+ZBImageTextSafe.m"; path = "ZBImageText/Classes/NSDictionary+ZBImageTextSafe.m"; sourceTree = "<group>"; };
 		C1CEB8A2ABED9F6EAE47A09C0CD2CD3E /* ZBFancyCollectionView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ZBFancyCollectionView-dummy.m"; sourceTree = "<group>"; };
 		C3DB0FCE9E354439E6DEBFB56F140DF8 /* ZBFancyLayoutHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZBFancyLayoutHelper.h; path = ZBFancyCollectionView/Classes/Layout/ZBFancyLayoutHelper.h; sourceTree = "<group>"; };
 		C46443F46C9D24ADEDF63210C30734BE /* UIImage+ForceDecode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ForceDecode.m"; path = "SDWebImage/UIImage+ForceDecode.m"; sourceTree = "<group>"; };
@@ -554,15 +555,19 @@
 		CE66E84E70A4B6091E4910A00639925C /* SDAnimatedImageRep.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDAnimatedImageRep.m; path = SDWebImage/SDAnimatedImageRep.m; sourceTree = "<group>"; };
 		CED088A16AECA8754EF2525C3C655763 /* FBNodeEnumerator.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = FBNodeEnumerator.mm; path = FBRetainCycleDetector/Detector/FBNodeEnumerator.mm; sourceTree = "<group>"; };
 		CEDAFDB5F5302145DDA7AA1272445422 /* SDWebImageManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageManager.h; path = SDWebImage/SDWebImageManager.h; sourceTree = "<group>"; };
+		CF42C979EAA3998E808D647E0AE63A4A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D043BCD51858F1E71A5B4A14EE93E7F0 /* ZBCollectionProtoFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZBCollectionProtoFactory.h; path = ZBFancyCollectionView/Classes/Fancy/ZBCollectionProtoFactory.h; sourceTree = "<group>"; };
+		D2EAF7A056AC56274C06BA0A38A35690 /* ZBImageText-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZBImageText-prefix.pch"; sourceTree = "<group>"; };
 		D3D1DCD00662C03A683FCD51B66D5C6E /* FBObjectInStructReference.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBObjectInStructReference.m; path = FBRetainCycleDetector/Layout/Classes/Reference/FBObjectInStructReference.m; sourceTree = "<group>"; };
 		D4370E2BDC346F6CDDEB5B7715B7BA66 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		D4ECAAC74DEF7EAC8E23CEC9D6D98E9A /* FBRetainCycleDetector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FBRetainCycleDetector.framework; path = FBRetainCycleDetector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5259A0FBC4D88B8DCB013C78F7293C4 /* FBAssociationManager.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = FBAssociationManager.mm; path = FBRetainCycleDetector/Associations/FBAssociationManager.mm; sourceTree = "<group>"; };
 		D5D045550C9826E51D14199B854A213E /* UIImageView+HighlightedWebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+HighlightedWebCache.h"; path = "SDWebImage/UIImageView+HighlightedWebCache.h"; sourceTree = "<group>"; };
+		D648282CAD0B67900BA4B1F31349186B /* ZBImageText.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZBImageText.xcconfig; sourceTree = "<group>"; };
 		D663757D8B85165BB0F642966DD74576 /* FBStructEncodingParser.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = FBStructEncodingParser.mm; path = FBRetainCycleDetector/Layout/Classes/Parser/FBStructEncodingParser.mm; sourceTree = "<group>"; };
 		D93343F35EDF6063F01833F9FC4EFD64 /* ZBFancyCellProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZBFancyCellProtocol.h; path = ZBFancyCollectionView/Classes/Service/ZBFancyCellProtocol.h; sourceTree = "<group>"; };
 		D9A47DA49EC47BC2D5E676055B31562D /* UIView+MemoryLeak.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+MemoryLeak.h"; path = "MLeaksFinder/UIView+MemoryLeak.h"; sourceTree = "<group>"; };
+		D9E1B28812C69786068CCA073463A0CB /* ZBImageText-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ZBImageText-dummy.m"; sourceTree = "<group>"; };
 		DB41634D087F576745057038E3AED38B /* NSAttributedString+YYText.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSAttributedString+YYText.m"; path = "YYText/Utility/NSAttributedString+YYText.m"; sourceTree = "<group>"; };
 		DC2D08808DC25B9EA7D7241C5C80D910 /* FBRetainCycleDetector.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = FBRetainCycleDetector.mm; path = FBRetainCycleDetector/Detector/FBRetainCycleDetector.mm; sourceTree = "<group>"; };
 		DDBD4BCC90CB8A1B15DEF5680AE9B36F /* YYTextLine.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYTextLine.m; path = YYText/Component/YYTextLine.m; sourceTree = "<group>"; };
@@ -572,6 +577,7 @@
 		E087E5ED9D59C4A576B5624852CC367A /* YYTextArchiver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYTextArchiver.h; path = YYText/String/YYTextArchiver.h; sourceTree = "<group>"; };
 		E1F023CAE60111E4BB398BE629FA99B0 /* UIImage+GIF.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+GIF.h"; path = "SDWebImage/UIImage+GIF.h"; sourceTree = "<group>"; };
 		E336EB6DE9F0121C5EE06D774462ABAA /* UITabBarController+MemoryLeak.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITabBarController+MemoryLeak.m"; path = "MLeaksFinder/UITabBarController+MemoryLeak.m"; sourceTree = "<group>"; };
+		E337853C510CA0686F125C4E3E24E0DF /* ZBImageText-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZBImageText-umbrella.h"; sourceTree = "<group>"; };
 		E3BFB5DB115A7F089D12D57A2DAEB7E2 /* YYTextParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYTextParser.h; path = YYText/String/YYTextParser.h; sourceTree = "<group>"; };
 		E3E3370A63648102050F97DB1F6D5D98 /* SDWebImagePrefetcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImagePrefetcher.h; path = SDWebImage/SDWebImagePrefetcher.h; sourceTree = "<group>"; };
 		E462C068F85F7A5D9EE8663E262808DA /* YYTextMagnifier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYTextMagnifier.h; path = YYText/Component/YYTextMagnifier.h; sourceTree = "<group>"; };
@@ -588,17 +594,15 @@
 		F0C57A819D4ED294839212E7AF47FB3F /* fishhook.c */ = {isa = PBXFileReference; includeInIndex = 1; name = fishhook.c; path = fishhook/fishhook.c; sourceTree = "<group>"; };
 		F174E7621319738C78BC3D1134E4D264 /* YYTextAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYTextAttribute.m; path = YYText/String/YYTextAttribute.m; sourceTree = "<group>"; };
 		F1F74A3FD819E89D72D3CB54E88884D6 /* Pods_ZBImageText_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ZBImageText_Example.framework; path = "Pods-ZBImageText_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F221DBD59BFCD53E8DA73C3860CC997F /* ZBImageTextMaker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZBImageTextMaker.m; path = ZBImageText/Classes/ZBImageTextMaker.m; sourceTree = "<group>"; };
 		F65564C933EC208D7DB9AF6D398E0784 /* YYTextRunDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYTextRunDelegate.h; path = YYText/String/YYTextRunDelegate.h; sourceTree = "<group>"; };
 		F7FE276D40D4DE3D97AD7C77AFA0B0E7 /* YYTextDebugOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYTextDebugOption.h; path = YYText/Component/YYTextDebugOption.h; sourceTree = "<group>"; };
-		F8B32E0D3EEDE1235CA0D800DCA50F19 /* ZBImageText.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = ZBImageText.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F9F211102901FE4EEABD8B0F48CC42E7 /* UITouch+MemoryLeak.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITouch+MemoryLeak.h"; path = "MLeaksFinder/UITouch+MemoryLeak.h"; sourceTree = "<group>"; };
 		FAF8D68B8F403B0759B1857B36551D4A /* SDAnimatedImageRep.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDAnimatedImageRep.h; path = SDWebImage/SDAnimatedImageRep.h; sourceTree = "<group>"; };
-		FB0138465092B1EB5E733BE9F3A9B0B4 /* ZBImageText-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ZBImageText-dummy.m"; sourceTree = "<group>"; };
 		FB5E9799D88B915F39E65CDB2E581485 /* NSObject+MemoryLeak.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MemoryLeak.m"; path = "MLeaksFinder/NSObject+MemoryLeak.m"; sourceTree = "<group>"; };
 		FCDFE315E277834F3BA33B2446FD7E3D /* MLeaksFinder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MLeaksFinder.h; path = MLeaksFinder/MLeaksFinder.h; sourceTree = "<group>"; };
 		FCEE0609F6DDC73297E24C53495E147C /* FBStandardGraphEdgeFilters.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBStandardGraphEdgeFilters.h; path = FBRetainCycleDetector/Filtering/FBStandardGraphEdgeFilters.h; sourceTree = "<group>"; };
 		FD01129855A263F5473FF766A2A37160 /* ZBCollectionMaker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZBCollectionMaker.h; path = ZBFancyCollectionView/Classes/Fancy/ZBCollectionMaker.h; sourceTree = "<group>"; };
-		FE5D01E6C31264F44D62941BFC448884 /* NSDictionary+ZBImageTextSafe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+ZBImageTextSafe.m"; path = "ZBImageText/Classes/NSDictionary+ZBImageTextSafe.m"; sourceTree = "<group>"; };
 		FEC9B13767184B8634E4AEEA68DC5B10 /* YYTextKeyboardManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYTextKeyboardManager.m; path = YYText/Component/YYTextKeyboardManager.m; sourceTree = "<group>"; };
 		FF022F2B10A5AF8C6A46A524A69070F3 /* FBObjectiveCGraphElement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBObjectiveCGraphElement.h; path = FBRetainCycleDetector/Graph/FBObjectiveCGraphElement.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -822,6 +826,28 @@
 			path = "../Target Support Files/MLeaksFinder";
 			sourceTree = "<group>";
 		};
+		448F5BE563F16EE628FD19881557F3D4 /* ZBImageText */ = {
+			isa = PBXGroup;
+			children = (
+				353608FA1FDB9846B55F15518B57C79B /* NSDictionary+ZBImageTextSafe.h */,
+				C188F4E6C986183EA8698ECCED5DCB0A /* NSDictionary+ZBImageTextSafe.m */,
+				BEF5F3A1585BF19909F456DE372D020A /* YYLabel+ZBImageTextAdditions.h */,
+				9CEAB7CF3DABD633C0916B164E0AB367 /* YYLabel+ZBImageTextAdditions.m */,
+				55C3B79CEA2F59977760481C3FBDBC68 /* ZBImageText.h */,
+				7DF5FA778719D292A12800192DFCB26D /* ZBImageText.m */,
+				6C8E2D91CA4F24306E17C426BE860933 /* ZBImageTextEngine.h */,
+				7373B1B5500E7D88F02931D769D99D63 /* ZBImageTextEngine.m */,
+				68E67CAA2BAAA03BE01C2AAC3DA7484B /* ZBImageTextMaker.h */,
+				F221DBD59BFCD53E8DA73C3860CC997F /* ZBImageTextMaker.m */,
+				8B720C31889955544183DC8ABFCD8B1A /* ZBImageTextUtilities.h */,
+				7E6484A34C9FBF1626C38FD4038AF089 /* ZBImageTextUtilities.m */,
+				B731654E5C395BF28614A418848E5858 /* Pod */,
+				EDC973C285380663531B0B9628F85A08 /* Support Files */,
+			);
+			name = ZBImageText;
+			path = ../..;
+			sourceTree = "<group>";
+		};
 		4AAEFB4CBDF40730418B0813C06BC891 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -834,26 +860,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/FBRetainCycleDetector";
-			sourceTree = "<group>";
-		};
-		66FCAD8FBFD00B6724D74FD959924384 /* ZBImageText */ = {
-			isa = PBXGroup;
-			children = (
-				B277D88E5A2E336FC75723202AB6045D /* NSDictionary+ZBImageTextSafe.h */,
-				FE5D01E6C31264F44D62941BFC448884 /* NSDictionary+ZBImageTextSafe.m */,
-				B0EB1405F4E42F9B92AB6EEA54398DCD /* YYLabel+ZBImageTextAdditions.h */,
-				BD9EE4426770BB244EAC501706B49FF4 /* YYLabel+ZBImageTextAdditions.m */,
-				596E775BB51387BD80D0775B67FBDA46 /* ZBImageText.h */,
-				23EF85B939D3DEC24895C7E159E9D0FE /* ZBImageText.m */,
-				28620D324E832E54F183B7B81CD1FB2F /* ZBImageTextEngine.h */,
-				093F4C2EAD8DC2C71CCEBAD987754D79 /* ZBImageTextEngine.m */,
-				812DA1C79069FFB505EE44113A2EF9E9 /* ZBImageTextMaker.h */,
-				5DFFC860870F7FF10E0E40E3E4368FA2 /* ZBImageTextMaker.m */,
-				92E625DDDDA95568903B567264F3B537 /* Pod */,
-				A2632E6F391AF01633B430DA31E8DFD9 /* Support Files */,
-			);
-			name = ZBImageText;
-			path = ../..;
 			sourceTree = "<group>";
 		};
 		67AE2DACE3543A34C174A361D42143B0 /* Pods */ = {
@@ -925,7 +931,7 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				B31E69A071613A960185F2486FE15D89 /* Development Pods */,
+				8BCF29DF70CC7C8D4F8C9851C5E0E566 /* Development Pods */,
 				87B4E53E1A2CC3235366D5EA8B6EB5C0 /* Frameworks */,
 				67AE2DACE3543A34C174A361D42143B0 /* Pods */,
 				7C7F0FE8EBCB47F9E36033A3C3517AE1 /* Products */,
@@ -1024,14 +1030,12 @@
 			path = "Target Support Files/Pods-ZBImageText_Example";
 			sourceTree = "<group>";
 		};
-		92E625DDDDA95568903B567264F3B537 /* Pod */ = {
+		8BCF29DF70CC7C8D4F8C9851C5E0E566 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6BBD19A4C2FA61FB0C8347F03DAF18B8 /* LICENSE */,
-				A8A1546C0B3B1833763AA29EEA8E551E /* README.md */,
-				F8B32E0D3EEDE1235CA0D800DCA50F19 /* ZBImageText.podspec */,
+				448F5BE563F16EE628FD19881557F3D4 /* ZBImageText */,
 			);
-			name = Pod;
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		93613A6429598C608B06B71B115DD270 /* Support Files */ = {
@@ -1048,26 +1052,14 @@
 			path = "../Target Support Files/YYText";
 			sourceTree = "<group>";
 		};
-		A2632E6F391AF01633B430DA31E8DFD9 /* Support Files */ = {
+		B731654E5C395BF28614A418848E5858 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				0B86DFC897A1866D5CF451B7B9CB802C /* Info.plist */,
-				1465AC0288D31FDFE9DFBB94E9BC97B5 /* ZBImageText.modulemap */,
-				99BFF2D297FBFA8C9145D4AEBAE1C074 /* ZBImageText.xcconfig */,
-				FB0138465092B1EB5E733BE9F3A9B0B4 /* ZBImageText-dummy.m */,
-				5A52FF8D08E775B317750749CCB6F474 /* ZBImageText-prefix.pch */,
-				530A061525E1724BD08755D14AE1891A /* ZBImageText-umbrella.h */,
+				A72F9CC76FDD648702F5920E16F6C221 /* LICENSE */,
+				62312850AEE1FF9B61236CCD020C1D60 /* README.md */,
+				B0EA7CB3DF435AF68E4660D3CEB709C9 /* ZBImageText.podspec */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/ZBImageText";
-			sourceTree = "<group>";
-		};
-		B31E69A071613A960185F2486FE15D89 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				66FCAD8FBFD00B6724D74FD959924384 /* ZBImageText */,
-			);
-			name = "Development Pods";
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		BB1F2069021875B3EAECF70BB637C45C /* FBRetainCycleDetector */ = {
@@ -1134,6 +1126,20 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
+		EDC973C285380663531B0B9628F85A08 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CF42C979EAA3998E808D647E0AE63A4A /* Info.plist */,
+				16265ABC9D0F40A8F5876DC989FF62D1 /* ZBImageText.modulemap */,
+				D648282CAD0B67900BA4B1F31349186B /* ZBImageText.xcconfig */,
+				D9E1B28812C69786068CCA073463A0CB /* ZBImageText-dummy.m */,
+				D2EAF7A056AC56274C06BA0A38A35690 /* ZBImageText-prefix.pch */,
+				E337853C510CA0686F125C4E3E24E0DF /* ZBImageText-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/ZBImageText";
+			sourceTree = "<group>";
+		};
 		F6E6A7BA060CCDD6E0638D0056C9AF94 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -1153,6 +1159,20 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		0552F91D03FB3B77491296DD94A20A49 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFB56353BD3340DBC6FB4960089AC760 /* NSDictionary+ZBImageTextSafe.h in Headers */,
+				05E03DF81668410A7E54E79FEE282C78 /* YYLabel+ZBImageTextAdditions.h in Headers */,
+				C8A585B79E7C6FF44F62AC00D4610C24 /* ZBImageText-umbrella.h in Headers */,
+				E65B610A748F20456DE22980A5D758E2 /* ZBImageText.h in Headers */,
+				852C796A0493B35339F47E45F84A133F /* ZBImageTextEngine.h in Headers */,
+				56C2C168FFA922A656B390A17048ED75 /* ZBImageTextMaker.h in Headers */,
+				536C4A351E8CB801D3B86323945858F8 /* ZBImageTextUtilities.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5E19FB86DDDDADDC85F350175366CBB4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1247,19 +1267,6 @@
 				B8D2CA86928E7B71723AFEC8599987C1 /* UIImageView+WebCache.h in Headers */,
 				AF6C593939A409B01DE931813A838506 /* UIView+WebCache.h in Headers */,
 				AF8EBFDF023155D54BAB3DA4D6C52369 /* UIView+WebCacheOperation.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E01BC9DCDE81958ADCDBA907D2782BB0 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DE2CB07AF37DE05011BC2921EA0BD4DC /* NSDictionary+ZBImageTextSafe.h in Headers */,
-				E0F1CE36F2492FE7C51BDF0AF9E1EC43 /* YYLabel+ZBImageTextAdditions.h in Headers */,
-				94C9DBADCBAC43C1E206B753D077B204 /* ZBImageText-umbrella.h in Headers */,
-				442440011322B87676E3D7E2EFF8C639 /* ZBImageText.h in Headers */,
-				8DF2CF92A26181D08D884A0D96CF91A1 /* ZBImageTextEngine.h in Headers */,
-				F42E19C67727C7B140850CE27648720B /* ZBImageTextMaker.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1403,8 +1410,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E20022491E6FB62D77B642267FF2D222 /* Build configuration list for PBXNativeTarget "ZBImageText" */;
 			buildPhases = (
-				E01BC9DCDE81958ADCDBA907D2782BB0 /* Headers */,
-				D7FAE1BA9660E57E0A854E2D6D724551 /* Sources */,
+				0552F91D03FB3B77491296DD94A20A49 /* Headers */,
+				F8C8329DC8D8D79C94E0F0CDB7E6A1D5 /* Sources */,
 				0E670EA2A6715D8E109FE7C084158459 /* Frameworks */,
 				C582156F588BDBCD96C9463B4F99FF41 /* Resources */,
 			);
@@ -1679,16 +1686,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D7FAE1BA9660E57E0A854E2D6D724551 /* Sources */ = {
+		F8C8329DC8D8D79C94E0F0CDB7E6A1D5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3610F4D55C3FD92D108D36A90198793 /* NSDictionary+ZBImageTextSafe.m in Sources */,
-				B50782450A8B9593363997474CD48B4D /* YYLabel+ZBImageTextAdditions.m in Sources */,
-				9BD446FDB4DCA5A86D4AFDBBA1801FE7 /* ZBImageText-dummy.m in Sources */,
-				0B697179B7DCA48FA238216BBFC5F124 /* ZBImageText.m in Sources */,
-				D3204C3B0E849EC4B74164242927061E /* ZBImageTextEngine.m in Sources */,
-				EA1203B1AF3C3BED8EC04EC554DA4D6F /* ZBImageTextMaker.m in Sources */,
+				F35D21D851C3F57F8D30C795BA11D2E4 /* NSDictionary+ZBImageTextSafe.m in Sources */,
+				E876E73BC9AE21FAB6C563C5184E3CC9 /* YYLabel+ZBImageTextAdditions.m in Sources */,
+				9DEACB1F79BD2FBA3D637B8A3FA0E399 /* ZBImageText-dummy.m in Sources */,
+				3A06C22E6E44B7214717CA3949730C1C /* ZBImageText.m in Sources */,
+				B829101A711E9D34A1C0512F6711F587 /* ZBImageTextEngine.m in Sources */,
+				3CE5E3809194DA1CE611229381D06A25 /* ZBImageTextMaker.m in Sources */,
+				18BE4013BF46CCA639C6713702BD4CBB /* ZBImageTextUtilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2029,7 +2037,7 @@
 		};
 		51B41329D64BFEF58B44DD0372332817 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 99BFF2D297FBFA8C9145D4AEBAE1C074 /* ZBImageText.xcconfig */;
+			baseConfigurationReference = D648282CAD0B67900BA4B1F31349186B /* ZBImageText.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -2242,7 +2250,7 @@
 		};
 		BECF05E62E2CFDB74925A9299294356B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 99BFF2D297FBFA8C9145D4AEBAE1C074 /* ZBImageText.xcconfig */;
+			baseConfigurationReference = D648282CAD0B67900BA4B1F31349186B /* ZBImageText.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

@@ -31,55 +31,53 @@
     
     [self.collectionView zb_setup:^(ZBCollectionMaker *maker) {
         maker.section(@"one");
-        for (NSInteger idx = 0; idx < 200; idx++) {
+        for (NSInteger idx = 0; idx < 20; idx++) {
             NSAttributedString *attributedString = [YYLabel zb_attributedStringWithContexts:^(ZBImageTextMaker *make) {
-                for (NSInteger idx = 0; idx < 3; idx++) {
-                    make.space(4.0);
-                    //默认
-                    make.image([UIImage imageNamed:@"Canada_28"]);
-                    make.space(4.0);
-                    //指定宽高
-                    make.image([UIImage imageNamed:@"img_empty"]).width(14).height(14);
-                    make.space(4.0);
-                    //web图
-                    make.image([UIImage imageNamed:@"img_empty"]).width(14).height(14).url(@"http://b0.hucdn.com/img/country_new/ct_18.png");
-                    make.space(4.0);
-                    //有边框样式
-                    make.image([UIImage imageNamed:@"Netherlands_28"]).width(11).height(11).border([ZBImageTextItemBorder borderWithColor:[UIColor blueColor] width:1 radius:5.5]).offset(-2);
-                    
-                    //默认
-                    make.text(@"优惠券");
-                    
-                    make.space(4.0);
-                    
-                    //baselineFont 用于中心对齐的基准font
-                    
-                    //指定font,color
-                    make.text(@"优惠券")
-                    .font([UIFont systemFontOfSize:12])
-                    .color([UIColor redColor])
-                    .baselineFont([UIFont systemFontOfSize:16]);
-                    
-                    make.space(4.0);
-                    
-                    //有背景的文字,图片会点九拉伸
-                    make.text(@"优惠券")
-                    .font([UIFont systemFontOfSize:12])
-                    .color([UIColor redColor])
-                    .baselineFont([UIFont systemFontOfSize:16])
-                    .offset(0.6)
-                    .bg([ZBImageTextItemBackground bgWithImage:[UIImage imageNamed:@"bg01"] margin:UIEdgeInsetsMake(2, 5, 2, 5)]);
-                    
-                    make.space(4.0);
-                    
-                    //有边框的文字
-                    make.text(@"下单立减10元")
-                    .font([UIFont systemFontOfSize:10])
-                    .color([UIColor redColor])
-                    .baselineFont([UIFont systemFontOfSize:16])
-                    .color([UIColor redColor])
-                    .border([ZBImageTextItemBorder borderWithColor:[UIColor redColor] width:0.5 radius:2 margin:UIEdgeInsetsMake(2, 3, 2, 3)]);
-                }
+                make.space(4.0);
+                //默认
+                make.image([UIImage imageNamed:@"Canada_28"]);
+                make.space(4.0);
+                //指定宽高
+                make.image([UIImage imageNamed:@"img_empty"]).width(14).height(14);
+                make.space(4.0);
+                //web图
+                make.image([UIImage imageNamed:@"img_empty"]).width(14).height(14).url(@"http://b0.hucdn.com/img/country_new/ct_18.png");
+                make.space(4.0);
+                //有边框样式
+                make.image([UIImage imageNamed:@"Netherlands_28"]).width(11).height(11).border([ZBImageTextItemBorder borderWithColor:[UIColor blueColor] width:1 radius:5.5]).offset(-2);
+                
+                //默认
+                make.text(@"优惠券");
+                
+                make.space(4.0);
+                
+                //baselineFont 用于中心对齐的基准font
+                
+                //指定font,color
+                make.text(@"优惠券")
+                .font([UIFont systemFontOfSize:12])
+                .color([UIColor redColor])
+                .baselineFont([UIFont systemFontOfSize:16]);
+                
+                make.space(4.0);
+                
+                //有背景的文字,图片会点九拉伸
+                make.text(@"优惠券")
+                .font([UIFont systemFontOfSize:12])
+                .color([UIColor redColor])
+                .baselineFont([UIFont systemFontOfSize:16])
+                .offset(0.6)
+                .bg([ZBImageTextItemBackground bgWithImage:[UIImage imageNamed:@"bg01"] margin:UIEdgeInsetsMake(2, 5, 2, 5)]);
+                
+                make.space(4.0);
+                
+                //有边框的文字
+                make.text(@"下单立减10元")
+                .font([UIFont systemFontOfSize:10])
+                .color([UIColor redColor])
+                .baselineFont([UIFont systemFontOfSize:16])
+                .color([UIColor redColor])
+                .border([ZBImageTextItemBorder borderWithColor:[UIColor redColor] width:0.5 radius:2 margin:UIEdgeInsetsMake(2, 3, 2, 3)]);
             }];
             maker.row(@"<item>").model(@{ @"attributedString" : attributedString });
         }

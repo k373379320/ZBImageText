@@ -15,6 +15,7 @@
 #import "ZBImageText.h"
 #import "ZBImageTextEngine.h"
 #import "ZBImageTextMaker.h"
+#import "ZBImageTextUtilities.h"
 
 FOUNDATION_EXPORT double ZBImageTextVersionNumber;
 FOUNDATION_EXPORT const unsigned char ZBImageTextVersionString[];

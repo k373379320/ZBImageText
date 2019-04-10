@@ -7,7 +7,7 @@ PODS:
   - SDWebImage/Core (4.4.6)
   - YYText (1.0.7)
   - ZBFancyCollectionView (1.1.0)
-  - ZBImageText (0.0.8):
+  - ZBImageText (0.0.9):
     - SDWebImage
     - YYText
 
@@ -28,8 +28,8 @@ SPEC CHECKSUMS:
   SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
   ZBFancyCollectionView: 8ce39ed5f8a799863eb49fb01e95c0ad0cec6941
-  ZBImageText: 716958e3229d8d29c08ee7bb56db65bce31ecc34
+  ZBImageText: 14bebf500b9227b872267df64d86e116ebde4443
 
-PODFILE CHECKSUM: 61e6856d262d772883d0bfa7a8acbdbc6c47d5e4
+PODFILE CHECKSUM: 0cc9000358ca34ad20c41ace199d17d58641a2de
 
 COCOAPODS: 1.4.0

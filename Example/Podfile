@@ -1,13 +1,15 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
 use_frameworks!
 
 platform :ios, '8.0'
 
 target 'ZBImageText_Example' do
     inhibit_all_warnings!
-  pod 'ZBImageText', :path => '../'
-
-  pod 'YYText'
-  pod 'SDWebImage'
-  pod 'MLeaksFinder',   :configurations => ['Debug']
-  pod 'ZBFancyCollectionView'
+    pod 'ZBImageText', :path => '../'
+    
+    pod 'YYText'
+    pod 'SDWebImage'
+    pod 'MLeaksFinder',   :configurations => ['Debug']
+    pod 'ZBFancyCollectionView'
 end
