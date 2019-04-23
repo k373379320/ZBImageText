@@ -49,10 +49,7 @@ typedef void (^ZBImageTextBlock)(id obj);
 + (NSAttributedString *)attributedStringFromData:(NSArray *)data
 {
     kStartTime;
-    NSArray<NSDictionary *> *items = [self filterData:data];
-    {
-        kEnd(@"过滤数据耗时");
-    }
+    NSArray<NSDictionary *> *items = [self availableItemsWithData:data];
     if (items.count == 0) {
         return nil;
     }
@@ -60,12 +57,7 @@ typedef void (^ZBImageTextBlock)(id obj);
     for (NSDictionary *itemData in items) {
         NSAttributedString *itemAtr = [self itemAttributedStringFromItemData:itemData];
         if (itemAtr) {
-            kStartTime;
             [atr appendAttributedString:itemAtr];
-#ifdef DEBUG
-            NSString *desc = [NSString stringWithFormat:@"生成template:%@", itemData[@"template"]];
-            kEnd(desc);
-#endif
         }
     }
     kEnd(@"生成attributed总耗时");
@@ -73,19 +65,6 @@ typedef void (^ZBImageTextBlock)(id obj);
 }
 
 #pragma mark - prive
-
-+ (NSString *)templateNameForData:(NSDictionary *)itemData
-{
-    if (!itemData) {
-        return @"";
-    }
-    for (NSString *key in itemData.allKeys) {
-        if ([[self templates] containsObject:key]) {
-            return key;
-        }
-    }
-    return @"";
-}
 
 + (NSAttributedString *)itemAttributedStringFromItemData:(NSDictionary *)data
 {
@@ -101,27 +80,33 @@ typedef void (^ZBImageTextBlock)(id obj);
     return nil;
 }
 
-+ (NSArray<NSDictionary *> *)filterData:(NSArray *)data
++ (NSArray<NSDictionary *> *)availableItemsWithData:(NSArray *)data
 {
     if (![data isKindOfClass:[NSArray class]]) {
         return @[];
     }
     NSMutableArray<NSDictionary *> *result = [NSMutableArray arrayWithCapacity:data.count];
     for (id obj in data) {
-        NSDictionary *item;
-        if ([obj isKindOfClass:[NSDictionary class]]) {
-            item = obj;
-        } else if ([obj isKindOfClass:[NSNumber class]]) {
-            item = @{
-                     @"space" : obj
-                     };
-        }
-        //确认模板
-        NSString *templateName = [self templateNameForData:item];
-        if (templateName.length > 0) {
-            NSMutableDictionary *resultDict = item.mutableCopy;
-            resultDict[@"template"] = templateName;
-            [result addObject:resultDict];
+        @autoreleasepool {
+            __weak NSMutableDictionary *item;
+            if ([obj isKindOfClass:[NSNumber class]]) {
+                item = @{
+                         @"template" : @"space",
+                         @"space" :  obj
+                         }.mutableCopy;
+            } else if ([obj isKindOfClass:[NSDictionary class]]) {
+                item = [NSMutableDictionary dictionaryWithDictionary:obj];
+                if (item[@"text"]) {
+                    item[@"template"] = @"text";
+                } else if (item[@"image"]) {
+                    item[@"template"] = @"image";
+                } else if (item[@"space"]) {
+                    item[@"template"] = @"space";
+                }
+            }
+            if (item) {
+                [result addObject:item];
+            }
         }
     }
     return result;
@@ -149,9 +134,7 @@ typedef void (^ZBImageTextBlock)(id obj);
 
 + (ZBImageTextItem *)imageTemplateWithData:(NSDictionary *)data
 {
-    //data
-    UIImage *image = data[@"image"];
-    image = [ZBImageTextUtilities highQualityImageWithOriginalImage:image];
+    UIImage *image = [data zb_safeImageValueForKey:@"image" defaultValue:nil];
     if (![image isKindOfClass:[UIImage class]] || CGSizeEqualToSize(image.size, CGSizeZero)) {
         return nil;
     }

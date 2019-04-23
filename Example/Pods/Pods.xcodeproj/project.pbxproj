@@ -45,13 +45,14 @@
 		20E57A47B118E5B7D58CE551C4473136 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9313F5C4DD4EC067AC862A4C13DE3F /* Foundation.framework */; };
 		229D4B29D0C6F9A083F940A5B83FC312 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667E6B32909B9A9E49E662D00099E36B /* ImageIO.framework */; };
 		2398511034EB5A40B8CA86142C7C1D7D /* ZBCollectionMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = FD01129855A263F5473FF766A2A37160 /* ZBCollectionMaker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		23EB3AAF8D15F85D8E48F6730E133640 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9313F5C4DD4EC067AC862A4C13DE3F /* Foundation.framework */; };
 		258A7DE98AF1D90076B75FD5D63C753E /* YYTextAsyncLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B2D1E916B1D6DEFDD9552D0F2F613A8 /* YYTextAsyncLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25F9C6DF2B96BEBDF44EB0DF72EB4D5E /* FBObjectInStructReference.h in Headers */ = {isa = PBXBuildFile; fileRef = 3779A652156458E541F9CFC6212E1E3A /* FBObjectInStructReference.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		288788649A3C7E0D574C5DB5649241D1 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0744BEFB85FDA6D8AB8CCCE8DE1D8606 /* SDWebImage.framework */; };
 		2A56FE0BAA06D800FC52F88CC83DDFBA /* SDImageCacheConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 107480EEE26241C15A44954ED6BF6730 /* SDImageCacheConfig.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		2AE12F04573748F953D22D4894F37DDB /* UIImage+MultiFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 75CD5B520190C320FB83C80323AF4913 /* UIImage+MultiFormat.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		2B02F97A262F40540E69886D6608AD13 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4370E2BDC346F6CDDEB5B7715B7BA66 /* CoreGraphics.framework */; };
 		2D65EE8FD3D3C49F90DAF060720716C9 /* FBBlockStrongRelationDetector.h in Headers */ = {isa = PBXBuildFile; fileRef = A60E146BFBED1B455CC9483D1F38C7C7 /* FBBlockStrongRelationDetector.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2D82B0B5263FA340B73F5ED2F1CC9270 /* YYText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C88D812DE9F3506A5604808E18F39E63 /* YYText.framework */; };
 		2E11E546461847710ACA386BFACB1D7B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54215B051DE089F14BDF17E8322604A4 /* QuartzCore.framework */; };
 		2EB8260CB35A7F9171E668D3A574310A /* FBStandardGraphEdgeFilters.mm in Sources */ = {isa = PBXBuildFile; fileRef = 811D5CC7FAFFFC09AEED6245EEF446CE /* FBStandardGraphEdgeFilters.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		2F6E11E4324D923D9E2F47030040A4AC /* NSObject+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5E9799D88B915F39E65CDB2E581485 /* NSObject+MemoryLeak.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -64,7 +65,7 @@
 		3F384E2264AAF115677D720A4E93EB4B /* MLeaksFinder-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C541ED5CEB228D7EA4B832656713A3B /* MLeaksFinder-dummy.m */; };
 		40FAFFAA86FF48BC1E14E8D10E3B9E60 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A4421C4B6AAC9EFF46E39F72293CCBB /* Accelerate.framework */; };
 		42825BBBD6E1EF5D4F17989A54F84012 /* SDWebImageTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = 806020A8CE1AFE3F3DBCD03FF9673B31 /* SDWebImageTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		45E7DB14DA506556216EFCE9E69F11E9 /* YYText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C88D812DE9F3506A5604808E18F39E63 /* YYText.framework */; };
+		44B802148861B36B298F9910A2663B6E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54215B051DE089F14BDF17E8322604A4 /* QuartzCore.framework */; };
 		462ABE3FE576CFBB864E3CEE37F42308 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9313F5C4DD4EC067AC862A4C13DE3F /* Foundation.framework */; };
 		462D2CA69F7C5894DDB0CB7C689346CB /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B5AA25AA25D8264258F504BB94BC4A /* SDWebImageCompat.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		46EAF2C139E55D92BED8F6C08AA0B789 /* MLeaksFinder-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BF38FF87B9D54E30575CA0DCAEA941E /* MLeaksFinder-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -95,6 +96,7 @@
 		5C92DA4C67EBC9099EF809BD4ABD9ED3 /* YYTextUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 927D07956E0C89B9584C88577C583FDB /* YYTextUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5D3FAD0389AA714E460B6A3ACAC57BEB /* UICollectionView+ZBFancy.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A920B59610CBE403CAD2B6B31BA941 /* UICollectionView+ZBFancy.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		5EE1D371F54B77882B2D7DDEF4402B71 /* UINavigationController+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = C053E7E3B145339BD2E3F96AC3DC2D83 /* UINavigationController+MemoryLeak.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5EF56CC95B6A2BF168C3FCE9D0F390A4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E553ED6AF759CAE321D763469A7DB663 /* UIKit.framework */; };
 		60C02CCDFBEF4025A427A073EEE68A00 /* FBRetainCycleDetector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A29A6D61EB2ED73B25C80F60800E379 /* FBRetainCycleDetector.framework */; };
 		6147BC73E3EB5D885DAF079D270B7E98 /* FBClassStrongLayout.mm in Sources */ = {isa = PBXBuildFile; fileRef = AAAFA8E4C2CED5E41C8996FCFF7CE345 /* FBClassStrongLayout.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		6207B5E79C13328AC5E766B7191E8638 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9313F5C4DD4EC067AC862A4C13DE3F /* Foundation.framework */; };
@@ -147,6 +149,7 @@
 		8B3D73EA89984777E2DFADA9752CCC6C /* UIImage+MultiFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = 3758548AF955C4276975EA2D30DB1EDF /* UIImage+MultiFormat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8ECC564C26A312F1FD36C8B16000DB24 /* SDWebImageCompat.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AEFAC570A229D9EB4C6837DDAD3930B /* SDWebImageCompat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9042DB7BE01532C30841EE9F787942A9 /* SDWebImageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDAFDB5F5302145DDA7AA1272445422 /* SDWebImageManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		90980752079988FC400E9E49201274CF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9313F5C4DD4EC067AC862A4C13DE3F /* Foundation.framework */; };
 		91786F07B3F1694594AD1D35D40CA506 /* UIImage+GIF.h in Headers */ = {isa = PBXBuildFile; fileRef = E1F023CAE60111E4BB398BE629FA99B0 /* UIImage+GIF.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9244215743E7C1D23FBDADC113626416 /* SDWebImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EC45B553F16741FC93C27F0DE4B7E357 /* SDWebImage-dummy.m */; };
 		92A8BD68D838737D5CFBD858E158493E /* UIButton+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D28848ABB7602F274B673698893FEBE /* UIButton+WebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -179,7 +182,6 @@
 		ABB17989B5BBA7876BE309C65159EB58 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4370E2BDC346F6CDDEB5B7715B7BA66 /* CoreGraphics.framework */; };
 		AC43D1DC6F392B2F18619CCFA9D556B2 /* Pods-ZBImageText_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 85A96D971F5F2C8EBED522B0522CEBBE /* Pods-ZBImageText_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADF77FE6814C2164AA5B170F2A745298 /* UIPasteboard+YYText.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C6ED215B4BB27F21A1290CA07A52F9 /* UIPasteboard+YYText.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AE5175E66744F7CE9029032E212293DA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4370E2BDC346F6CDDEB5B7715B7BA66 /* CoreGraphics.framework */; };
 		AE939D224B51A00C3B65890847F02A32 /* ZBSection.h in Headers */ = {isa = PBXBuildFile; fileRef = 23498D30DD04E6ABA621DF27AD135B44 /* ZBSection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF6C593939A409B01DE931813A838506 /* UIView+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = AA851FEAC7401C4114FEF3FC065EBCA4 /* UIView+WebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF8EBFDF023155D54BAB3DA4D6C52369 /* UIView+WebCacheOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AEBB5BFF4762C0226111272910CFA64 /* UIView+WebCacheOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -199,8 +201,8 @@
 		BABA46F1B9FCA641E71C641E24DD4980 /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9A18CB761E4BA4A00181556B00CB02 /* UIButton+WebCache.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		BBE885B32B6A0042A85742BA90C73885 /* MLeakedObjectProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C730402674BD34C719B27B95B8B0AE /* MLeakedObjectProxy.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		BD87AF3D0C51699AEA6755B1E1C7CD49 /* YYTextMagnifier.m in Sources */ = {isa = PBXBuildFile; fileRef = DF17A246A478E991389654F734022C5B /* YYTextMagnifier.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		BDB6AA1275B90FAA63AFB7C487CCE91D /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667E6B32909B9A9E49E662D00099E36B /* ImageIO.framework */; };
 		BEE88408B489C625CCB081BE0A5DB19A /* FBObjectiveCNSCFTimer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7339798DB9A43A3576F5371831552B22 /* FBObjectiveCNSCFTimer.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		C059F518DB031D4A53230511AFA52A40 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E553ED6AF759CAE321D763469A7DB663 /* UIKit.framework */; };
 		C13828BEE4D3FFA89D2EEAF9B600F921 /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8DF86BA70A887ADD5A0728960AE353 /* SDWebImagePrefetcher.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		C317E156D4439B1DAE97F46BEFDD1AD4 /* YYTextSelectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AB25800440AB5BEA67F97070C8134C1 /* YYTextSelectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3F00BD954AFB6DED680CE7319E29BA7 /* SDWebImageCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D578DBFA185D9681DA3F218B0A1D0B /* SDWebImageCoder.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -208,6 +210,7 @@
 		C6CA6D83A5E940A7B7605211E4149E66 /* ZBCollectionProtoFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = D043BCD51858F1E71A5B4A14EE93E7F0 /* ZBCollectionProtoFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C863CE6FD4CE15825D8BAB1228EFF63C /* YYTextRubyAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = 082FC913656FC2DD81C8774FC39F6A07 /* YYTextRubyAnnotation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C8A585B79E7C6FF44F62AC00D4610C24 /* ZBImageText-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E337853C510CA0686F125C4E3E24E0DF /* ZBImageText-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C8EA531F18058D5EDD379182513A4D2F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4370E2BDC346F6CDDEB5B7715B7BA66 /* CoreGraphics.framework */; };
 		CC0E844325FD778A6AC6B566568BB6F2 /* UIViewController+MemoryLeak.h in Headers */ = {isa = PBXBuildFile; fileRef = E6B84F6667898DB72B049EC7433F898F /* UIViewController+MemoryLeak.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		CE476757ACF632E4E47B089CC567F1F3 /* FBObjectiveCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB5749AEEF61312E651A5B2D29FB0BA /* FBObjectiveCObject.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		CE74FE53F02A640F8331D96E2C7AE09B /* YYTextLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A5E07AA642E56BAB24216587C827FC3 /* YYTextLayout.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -251,12 +254,10 @@
 		F251562CF962A4CE1E615AC3FE3208F8 /* FBIvarReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B9ED350B633A7AC7A3BA67A4C9D1A1 /* FBIvarReference.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F35D21D851C3F57F8D30C795BA11D2E4 /* NSDictionary+ZBImageTextSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = C188F4E6C986183EA8698ECCED5DCB0A /* NSDictionary+ZBImageTextSafe.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F399D97A8A7D9FE403E04B7320A11505 /* YYTextArchiver.h in Headers */ = {isa = PBXBuildFile; fileRef = E087E5ED9D59C4A576B5624852CC367A /* YYTextArchiver.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F4B970944215038EFB41C0118546D27C /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0744BEFB85FDA6D8AB8CCCE8DE1D8606 /* SDWebImage.framework */; };
 		F568D0BC4D50DF1F27F616E48C18AB30 /* YYTextDebugOption.h in Headers */ = {isa = PBXBuildFile; fileRef = F7FE276D40D4DE3D97AD7C77AFA0B0E7 /* YYTextDebugOption.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F7C1329FFFBA7500CF6961E41E8C6BA2 /* MLeaksFinder.h in Headers */ = {isa = PBXBuildFile; fileRef = FCDFE315E277834F3BA33B2446FD7E3D /* MLeaksFinder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F8E82497CF694AE123C5576A39092C3B /* UISplitViewController+MemoryLeak.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B680508ED60E5B207C9FF7E11A62965 /* UISplitViewController+MemoryLeak.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F90AC564AC3F42FF5B4B60FECCDB3074 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E553ED6AF759CAE321D763469A7DB663 /* UIKit.framework */; };
-		FABFE60445144CB01AAAA364603943D5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54215B051DE089F14BDF17E8322604A4 /* QuartzCore.framework */; };
 		FAED81DF84038051DFA985BE51E1E3D5 /* SDWebImage-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFB574993A5809D8182DC8A6D3B9B29 /* SDWebImage-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FBA8FE1B156472D3297081A440BE6DFC /* FBObjectInStructReference.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D1DCD00662C03A683FCD51B66D5C6E /* FBObjectInStructReference.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		FF5DF64BCEAA39B3309675ABACBF7DC2 /* YYTextUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 0439D32631820CE7B15B5C10DD8CE9FB /* YYTextUtilities.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -620,19 +621,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0E670EA2A6715D8E109FE7C084158459 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AE5175E66744F7CE9029032E212293DA /* CoreGraphics.framework in Frameworks */,
-				23EB3AAF8D15F85D8E48F6730E133640 /* Foundation.framework in Frameworks */,
-				FABFE60445144CB01AAAA364603943D5 /* QuartzCore.framework in Frameworks */,
-				F4B970944215038EFB41C0118546D27C /* SDWebImage.framework in Frameworks */,
-				C059F518DB031D4A53230511AFA52A40 /* UIKit.framework in Frameworks */,
-				45E7DB14DA506556216EFCE9E69F11E9 /* YYText.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		72B5E531ECA7897482499B09EA146432 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -641,6 +629,20 @@
 				20E57A47B118E5B7D58CE551C4473136 /* Foundation.framework in Frameworks */,
 				55F7E7604F5668F29EDECFE1A6CD744A /* QuartzCore.framework in Frameworks */,
 				6BFA658D1475B210709092F3C66460A3 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94345FAD951B3DE2E44A00A952A9199F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8EA531F18058D5EDD379182513A4D2F /* CoreGraphics.framework in Frameworks */,
+				90980752079988FC400E9E49201274CF /* Foundation.framework in Frameworks */,
+				BDB6AA1275B90FAA63AFB7C487CCE91D /* ImageIO.framework in Frameworks */,
+				44B802148861B36B298F9910A2663B6E /* QuartzCore.framework in Frameworks */,
+				288788649A3C7E0D574C5DB5649241D1 /* SDWebImage.framework in Frameworks */,
+				5EF56CC95B6A2BF168C3FCE9D0F390A4 /* UIKit.framework in Frameworks */,
+				2D82B0B5263FA340B73F5ED2F1CC9270 /* YYText.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1412,7 +1414,7 @@
 			buildPhases = (
 				0552F91D03FB3B77491296DD94A20A49 /* Headers */,
 				F8C8329DC8D8D79C94E0F0CDB7E6A1D5 /* Sources */,
-				0E670EA2A6715D8E109FE7C084158459 /* Frameworks */,
+				94345FAD951B3DE2E44A00A952A9199F /* Frameworks */,
 				C582156F588BDBCD96C9463B4F99FF41 /* Resources */,
 			);
 			buildRules = (
@@ -1760,129 +1762,7 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		08A4978CB5BF51440795D40C825A0221 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 282389DDB80D1C9C6549C45531659DA5 /* MLeaksFinder.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/MLeaksFinder/MLeaksFinder-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MLeaksFinder/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/MLeaksFinder/MLeaksFinder.modulemap";
-				PRODUCT_MODULE_NAME = MLeaksFinder;
-				PRODUCT_NAME = MLeaksFinder;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		0D0797FB70F6F36D96B74A5C0623C5A8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5C79A197E90CF9EB03A19A2D870BB876 /* FBRetainCycleDetector.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/FBRetainCycleDetector/FBRetainCycleDetector-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/FBRetainCycleDetector/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/FBRetainCycleDetector/FBRetainCycleDetector.modulemap";
-				PRODUCT_MODULE_NAME = FBRetainCycleDetector;
-				PRODUCT_NAME = FBRetainCycleDetector;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		16EE7E8920CBDA6D181D7B0F84DDA1F5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3A7F730CB3CA2788E2E0991A264E20F4 /* YYText.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/YYText/YYText-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/YYText/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/YYText/YYText.modulemap";
-				PRODUCT_MODULE_NAME = YYText;
-				PRODUCT_NAME = YYText;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		1ECF529A7E04AD46D9166E5D34B20F79 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5C79A197E90CF9EB03A19A2D870BB876 /* FBRetainCycleDetector.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/FBRetainCycleDetector/FBRetainCycleDetector-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/FBRetainCycleDetector/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/FBRetainCycleDetector/FBRetainCycleDetector.modulemap";
-				PRODUCT_MODULE_NAME = FBRetainCycleDetector;
-				PRODUCT_NAME = FBRetainCycleDetector;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		43E6C839F4864BFD654068725C674EE6 /* Debug */ = {
+		2C923CDDF5AFCA694313B31D3CEBE1C8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8B00AFFB81FF4A4AB4E8B155AAA3DDE0 /* SDWebImage.xcconfig */;
 			buildSettings = {
@@ -1906,13 +1786,47 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2.1;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		470E7012AD514683332A3774264C705A /* Debug */ = {
+		43BBC360701B9FD3A5CBE972CC4B8568 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A7F730CB3CA2788E2E0991A264E20F4 /* YYText.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/YYText/YYText-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YYText/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/YYText/YYText.modulemap";
+				PRODUCT_MODULE_NAME = YYText;
+				PRODUCT_NAME = YYText;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		58061D6214283F8803FFB21396AB165F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 282389DDB80D1C9C6549C45531659DA5 /* MLeaksFinder.xcconfig */;
 			buildSettings = {
@@ -1936,67 +1850,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		48213EDCD598DDFB965FCAA2B2A651A4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4012B6BDD3F2F317AFB500EABB64B86F /* ZBFancyCollectionView.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/ZBFancyCollectionView/ZBFancyCollectionView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ZBFancyCollectionView/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ZBFancyCollectionView/ZBFancyCollectionView.modulemap";
-				PRODUCT_MODULE_NAME = ZBFancyCollectionView;
-				PRODUCT_NAME = ZBFancyCollectionView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		54AFBDCA61CC5C1F939BE2F843EC5687 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D648282CAD0B67900BA4B1F31349186B /* ZBImageText.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/ZBImageText/ZBImageText-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ZBImageText/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ZBImageText/ZBImageText.modulemap";
-				PRODUCT_MODULE_NAME = ZBImageText;
-				PRODUCT_NAME = ZBImageText;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2.1;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -2036,7 +1890,38 @@
 			};
 			name = Debug;
 		};
-		6858ACF4461D5A75F2DFC290CB717013 /* Release */ = {
+		5F0F7257546EE5070252BA60846F1C8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4012B6BDD3F2F317AFB500EABB64B86F /* ZBFancyCollectionView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ZBFancyCollectionView/ZBFancyCollectionView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ZBFancyCollectionView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ZBFancyCollectionView/ZBFancyCollectionView.modulemap";
+				PRODUCT_MODULE_NAME = ZBFancyCollectionView;
+				PRODUCT_NAME = ZBFancyCollectionView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6AA0F4BFCFC2B0DFE3963E8276FCE7B3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D648282CAD0B67900BA4B1F31349186B /* ZBImageText.xcconfig */;
 			buildSettings = {
@@ -2060,6 +1945,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2.1;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -2129,6 +2015,37 @@
 			};
 			name = Release;
 		};
+		A5B34C866A745CD9446BE6B58F1A8DD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B00AFFB81FF4A4AB4E8B155AAA3DDE0 /* SDWebImage.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SDWebImage/SDWebImage-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SDWebImage/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SDWebImage/SDWebImage.modulemap";
+				PRODUCT_MODULE_NAME = SDWebImage;
+				PRODUCT_NAME = SDWebImage;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		A73625DEBD810B78234FA1958C191C8C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2195,9 +2112,9 @@
 			};
 			name = Debug;
 		};
-		AF3A74EF25201031DC2BF0C769721EF2 /* Release */ = {
+		BA4E021F7315E771337265EF21B96E1D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8B00AFFB81FF4A4AB4E8B155AAA3DDE0 /* SDWebImage.xcconfig */;
+			baseConfigurationReference = D648282CAD0B67900BA4B1F31349186B /* ZBImageText.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -2208,25 +2125,25 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SDWebImage/SDWebImage-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SDWebImage/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/ZBImageText/ZBImageText-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ZBImageText/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SDWebImage/SDWebImage.modulemap";
-				PRODUCT_MODULE_NAME = SDWebImage;
-				PRODUCT_NAME = SDWebImage;
+				MODULEMAP_FILE = "Target Support Files/ZBImageText/ZBImageText.modulemap";
+				PRODUCT_MODULE_NAME = ZBImageText;
+				PRODUCT_NAME = ZBImageText;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2.1;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		BF2B8D06AD5F989DBA7EECB571F1E6E3 /* Release */ = {
+		C09F793A33E95E8C2C9E2179A67DA535 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3A7F730CB3CA2788E2E0991A264E20F4 /* YYText.xcconfig */;
 			buildSettings = {
@@ -2250,37 +2167,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		C2EE4585796EBD148B9CACDA2AFBD294 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4012B6BDD3F2F317AFB500EABB64B86F /* ZBFancyCollectionView.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/ZBFancyCollectionView/ZBFancyCollectionView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ZBFancyCollectionView/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ZBFancyCollectionView/ZBFancyCollectionView.modulemap";
-				PRODUCT_MODULE_NAME = ZBFancyCollectionView;
-				PRODUCT_NAME = ZBFancyCollectionView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2.1;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -2321,14 +2208,141 @@
 			};
 			name = Release;
 		};
+		D2333F9C1E57BE72B9AAC029397B2B5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C79A197E90CF9EB03A19A2D870BB876 /* FBRetainCycleDetector.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FBRetainCycleDetector/FBRetainCycleDetector-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FBRetainCycleDetector/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FBRetainCycleDetector/FBRetainCycleDetector.modulemap";
+				PRODUCT_MODULE_NAME = FBRetainCycleDetector;
+				PRODUCT_NAME = FBRetainCycleDetector;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D35A54434519E3578801B0A2DDEF2E66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C79A197E90CF9EB03A19A2D870BB876 /* FBRetainCycleDetector.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FBRetainCycleDetector/FBRetainCycleDetector-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FBRetainCycleDetector/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FBRetainCycleDetector/FBRetainCycleDetector.modulemap";
+				PRODUCT_MODULE_NAME = FBRetainCycleDetector;
+				PRODUCT_NAME = FBRetainCycleDetector;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F3FF4FC817BB9379875B389D65248E12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4012B6BDD3F2F317AFB500EABB64B86F /* ZBFancyCollectionView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ZBFancyCollectionView/ZBFancyCollectionView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ZBFancyCollectionView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ZBFancyCollectionView/ZBFancyCollectionView.modulemap";
+				PRODUCT_MODULE_NAME = ZBFancyCollectionView;
+				PRODUCT_NAME = ZBFancyCollectionView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F6E5BCAAD9F6B078C47FD3F0E420C6A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 282389DDB80D1C9C6549C45531659DA5 /* MLeaksFinder.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MLeaksFinder/MLeaksFinder-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MLeaksFinder/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MLeaksFinder/MLeaksFinder.modulemap";
+				PRODUCT_MODULE_NAME = MLeaksFinder;
+				PRODUCT_NAME = MLeaksFinder;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		0A4B576FE941C48E860FE314938F7307 /* Build configuration list for PBXNativeTarget "MLeaksFinder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				470E7012AD514683332A3774264C705A /* Debug */,
-				08A4978CB5BF51440795D40C825A0221 /* Release */,
+				58061D6214283F8803FFB21396AB165F /* Debug */,
+				F6E5BCAAD9F6B078C47FD3F0E420C6A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2354,8 +2368,8 @@
 		3E07ACB19A1FD6878980ACE9102A4145 /* Build configuration list for PBXNativeTarget "ZBFancyCollectionView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C2EE4585796EBD148B9CACDA2AFBD294 /* Debug */,
-				48213EDCD598DDFB965FCAA2B2A651A4 /* Release */,
+				5F0F7257546EE5070252BA60846F1C8F /* Debug */,
+				F3FF4FC817BB9379875B389D65248E12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2363,8 +2377,8 @@
 		47AB6074036C5FDF0C8D9BBDC0A6E499 /* Build configuration list for PBXNativeTarget "SDWebImage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				43E6C839F4864BFD654068725C674EE6 /* Debug */,
-				AF3A74EF25201031DC2BF0C769721EF2 /* Release */,
+				A5B34C866A745CD9446BE6B58F1A8DD0 /* Debug */,
+				2C923CDDF5AFCA694313B31D3CEBE1C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2372,8 +2386,8 @@
 		97839EAB9401A9E28AB5E8CB37564D91 /* Build configuration list for PBXNativeTarget "YYText" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				16EE7E8920CBDA6D181D7B0F84DDA1F5 /* Debug */,
-				BF2B8D06AD5F989DBA7EECB571F1E6E3 /* Release */,
+				C09F793A33E95E8C2C9E2179A67DA535 /* Debug */,
+				43BBC360701B9FD3A5CBE972CC4B8568 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2381,8 +2395,8 @@
 		E20022491E6FB62D77B642267FF2D222 /* Build configuration list for PBXNativeTarget "ZBImageText" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				54AFBDCA61CC5C1F939BE2F843EC5687 /* Debug */,
-				6858ACF4461D5A75F2DFC290CB717013 /* Release */,
+				BA4E021F7315E771337265EF21B96E1D /* Debug */,
+				6AA0F4BFCFC2B0DFE3963E8276FCE7B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2390,8 +2404,8 @@
 		F9ACE60915F337A4A541F5BFD605F059 /* Build configuration list for PBXNativeTarget "FBRetainCycleDetector" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0D0797FB70F6F36D96B74A5C0623C5A8 /* Debug */,
-				1ECF529A7E04AD46D9166E5D34B20F79 /* Release */,
+				D35A54434519E3578801B0A2DDEF2E66 /* Debug */,
+				D2333F9C1E57BE72B9AAC029397B2B5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
