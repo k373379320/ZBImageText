@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ZBImageTextEngine : NSObject
 
-+ (NSAttributedString *)attributedStringFromData:(NSArray<id> *)data;
++ (NSAttributedString *)attributedStringFromData:(NSArray<NSDictionary *> *)data;
 
 @end
 

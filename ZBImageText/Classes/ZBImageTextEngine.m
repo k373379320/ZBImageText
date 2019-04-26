@@ -10,9 +10,17 @@
 #import <YYText/YYText.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "NSDictionary+ZBImageTextSafe.h"
+#import "UIImageView+ZBImageTextCornerRadius.h"
 #import "ZBImageTextUtilities.h"
 
 typedef void (^ZBImageTextBlock)(id obj);
+
+#define zb_dispatch_main_async_safe(block)\
+if ([NSThread isMainThread]) {\
+block();\
+} else {\
+dispatch_async(dispatch_get_main_queue(), block);\
+}
 
 #ifdef DEBUG
 #define kStartTime //CFAbsoluteTime startTime = CFAbsoluteTimeGetCurrent();
@@ -46,7 +54,7 @@ typedef void (^ZBImageTextBlock)(id obj);
 }
 
 #pragma mark - api
-+ (NSAttributedString *)attributedStringFromData:(NSArray *)data
++ (NSAttributedString *)attributedStringFromData:(NSArray<NSDictionary *> *)data
 {
     kStartTime;
     NSArray<NSDictionary *> *items = [self availableItemsWithData:data];
@@ -55,9 +63,11 @@ typedef void (^ZBImageTextBlock)(id obj);
     }
     NSMutableAttributedString *atr = [[NSMutableAttributedString alloc] init];
     for (NSDictionary *itemData in items) {
-        NSAttributedString *itemAtr = [self itemAttributedStringFromItemData:itemData];
-        if (itemAtr) {
-            [atr appendAttributedString:itemAtr];
+        @autoreleasepool {
+            NSAttributedString *itemAtr = [self itemAttributedStringFromItemData:itemData];
+            if (itemAtr) {
+                [atr appendAttributedString:itemAtr];
+            }
         }
     }
     kEnd(@"生成attributed总耗时");
@@ -87,22 +97,17 @@ typedef void (^ZBImageTextBlock)(id obj);
     }
     NSMutableArray<NSDictionary *> *result = [NSMutableArray arrayWithCapacity:data.count];
     for (id obj in data) {
+        if (![obj isKindOfClass:[NSDictionary class]]) {
+            continue;
+        }
         @autoreleasepool {
-            __weak NSMutableDictionary *item;
-            if ([obj isKindOfClass:[NSNumber class]]) {
-                item = @{
-                         @"template" : @"space",
-                         @"space" :  obj
-                         }.mutableCopy;
-            } else if ([obj isKindOfClass:[NSDictionary class]]) {
-                item = [NSMutableDictionary dictionaryWithDictionary:obj];
-                if (item[@"text"]) {
-                    item[@"template"] = @"text";
-                } else if (item[@"image"]) {
-                    item[@"template"] = @"image";
-                } else if (item[@"space"]) {
-                    item[@"template"] = @"space";
-                }
+            NSMutableDictionary *item = [NSMutableDictionary dictionaryWithDictionary:obj];
+            if (item[@"text"]) {
+                item[@"template"] = @"text";
+            } else if (item[@"image"]) {
+                item[@"template"] = @"image";
+            } else if (item[@"space"]) {
+                item[@"template"] = @"space";
             }
             if (item) {
                 [result addObject:item];
@@ -116,6 +121,9 @@ typedef void (^ZBImageTextBlock)(id obj);
 + (ZBImageTextItem *)spaceTemplateWithData:(NSDictionary *)data
 {
     CGFloat space = [data zb_safeFloatValueForKey:@"space" defaultValue:0];
+    
+    //hock
+    ZBImageTextBlock itemBlock = data[@"item"] ? : nil;
     if (space <= 0) {
         return nil;
     }
@@ -129,11 +137,29 @@ typedef void (^ZBImageTextBlock)(id obj);
     ZBImageTextItem *item = [[ZBImageTextItem alloc] init];
     item.attributedString = [atr copy];
     item.size = CGSizeMake(space, 0);
+    if (itemBlock) {
+        itemBlock(item);
+    }
     return item;
 }
 
++ (BOOL)refreshLabelWithContainerLayer:(CALayer *)containerLayer refreshEventBlock:(void(^)(void))refreshEventBlock
+{
+    CALayer *superLayer = containerLayer.superlayer;
+    if (superLayer && [superLayer.delegate isKindOfClass:[YYLabel class]]) {
+        if (refreshEventBlock) {
+            refreshEventBlock();
+        }
+        YYLabel *label = (YYLabel *)superLayer.delegate;
+        [label setNeedsLayout];
+        return YES;
+    }
+    return NO;
+}
 + (ZBImageTextItem *)imageTemplateWithData:(NSDictionary *)data
 {
+    NSAssert([NSThread isMainThread], @"must be called on the main thread");
+    
     UIImage *image = [data zb_safeImageValueForKey:@"image" defaultValue:nil];
     if (![image isKindOfClass:[UIImage class]] || CGSizeEqualToSize(image.size, CGSizeZero)) {
         return nil;
@@ -156,18 +182,19 @@ typedef void (^ZBImageTextBlock)(id obj);
     __block CALayer *containerLayer = [CALayer layer];
     containerLayer.frame = CGRectMake(0, 0, containerSize.width, containerSize.height);
     {
-        UIImageView *imageV = [[UIImageView alloc] initWithFrame:CGRectMake(0, offsetY, containerSize.width, containerSize.height)];
+        //采用imageView理由:
+        //1.可以使用sd_setImageWithURL
+        //2.图片需要点9拉伸,也方便;
+        __block UIImageView *imageV = [[UIImageView alloc] initWithFrame:CGRectMake(0, offsetY, containerSize.width, containerSize.height)];
         if (imageURL) {
+            //TODO : 根据不同项目自定义?
             [imageV sd_setImageWithURL:imageURL placeholderImage:image completed:^(UIImage *_Nullable image, NSError *_Nullable error, SDImageCacheType cacheType, NSURL *_Nullable imageURL) {
-                CALayer *superLayer = containerLayer.superlayer;
-                if (superLayer && [superLayer.delegate isKindOfClass:[YYLabel class]]) {
-                    imageV.layer.contents = (id)[ZBImageTextUtilities highQualityImageWithOriginalImage:image].CGImage;
-                    YYLabel *label = (YYLabel *)superLayer.delegate;
-                    [label setNeedsLayout];
-                }
+                [ZBImageTextEngine refreshLabelWithContainerLayer:containerLayer refreshEventBlock:^{
+                    imageV.layer.contents = (id)image.CGImage;
+                }];
             }];
         } else {
-            imageV.image = [ZBImageTextUtilities highQualityImageWithOriginalImage:image];
+            imageV.image = image;
         }
         
         if (border) {
@@ -179,8 +206,7 @@ typedef void (^ZBImageTextBlock)(id obj);
                 imageV.layer.borderWidth = borderWidth;
             }
             if (borderRadius > 0) {
-                imageV.layer.masksToBounds = YES;
-                imageV.layer.cornerRadius = borderRadius;
+                [imageV zb_setCornerRadius:borderRadius];
             }
         }
         
@@ -202,8 +228,8 @@ typedef void (^ZBImageTextBlock)(id obj);
     [atr yy_setTextAttachment:attach range:NSMakeRange(0, atr.length)];
     
     YYTextRunDelegate *delegate = [YYTextRunDelegate new];
-    delegate.width =  containerSize.width;
-    delegate.ascent =  containerSize.height;
+    delegate.width = containerSize.width;
+    delegate.ascent = containerSize.height;
     delegate.descent = 0;
     
     CTRunDelegateRef delegateRef = delegate.CTRunDelegate;
@@ -221,17 +247,18 @@ typedef void (^ZBImageTextBlock)(id obj);
 
 + (ZBImageTextItem *)textTemplateWithData:(NSDictionary *)data
 {
+    NSAssert([NSThread isMainThread], @"must be called on the main thread");
     //data
     NSString *text = [data zb_safeStringValueForKey:@"text" defaultValue:@""];
     if (text.length <= 0) {
         return nil;
     }
     UIFont *font = [data zb_safeFontValueForKey:@"font" defaultValue:[UIFont systemFontOfSize:15]];
-    UIColor *color =  [data zb_safeColorValueForKey:@"color" defaultValue:[UIColor blackColor]];
+    UIColor *color = [data zb_safeColorValueForKey:@"color" defaultValue:[UIColor blackColor]];
     UIFont *baselineFont = [data zb_safeFontValueForKey:@"baselineFont" defaultValue:nil];
     //border
     NSDictionary *border = [data zb_safeDictionaryValueForKey:@"border" defaultValue:nil];
-    UIEdgeInsets borderMargin;
+    UIEdgeInsets borderMargin = UIEdgeInsetsZero;
     UIColor *borderColor = [UIColor blackColor];
     CGFloat borderWidth = 0.5f;
     CGFloat borderRadius = 0;
