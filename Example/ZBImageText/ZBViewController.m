@@ -46,6 +46,7 @@
     [self.label zb_makeContexts:^(ZBImageTextMaker *make) {
         make.space(4.0);
         
+
         //默认
         make.image([UIImage imageNamed:@"Canada_28"]);
         make.space(4.0);
@@ -53,16 +54,16 @@
         ZBImageTextBlock imgEmptyBlock = ^(UIImageView *imageView) {
             NSLog(@"%@", imageView);
         };
-        
-        make.image([UIImage imageNamed:@"img_empty"]).width(14).height(14).config(@{ @"imageView" : imgEmptyBlock });
+        make.image(([UIImage imageNamed:@"Canada_28"])).width(14).height(14).config(@{ @"imageView" : imgEmptyBlock });
         make.space(4.0);
         //web图
         make.image([UIImage imageNamed:@"img_empty"]).width(14).height(14).url(@"http://b0.hucdn.com/img/country_new/ct_18.png");
         make.space(4.0);
         //有边框样式
-        make.image([UIImage imageNamed:@"Netherlands_28"]).width(11).height(11).border([ZBImageTextItemBorder borderWithColor:[UIColor blueColor] width:1 radius:5.5]).offset(-2);
+        make.image([UIImage imageNamed:@"img_empty"]).width(20).height(20).border([ZBImageTextItemBorder borderWithColor:[UIColor blueColor] width:1 radius:5]).offset(-2);
+        make.space(4.0);
         
-        //默认
+        //删除线
         make.text(@"优惠券").decoration([ZBImageTextItemDecoration decoration]);
         
         make.space(4.0);

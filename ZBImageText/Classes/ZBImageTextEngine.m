@@ -15,11 +15,11 @@
 
 typedef void (^ZBImageTextBlock)(id obj);
 
-#define zb_dispatch_main_async_safe(block)\
-if ([NSThread isMainThread]) {\
-block();\
-} else {\
-dispatch_async(dispatch_get_main_queue(), block);\
+#define zb_dispatch_main_async_safe(block) \
+if ([NSThread isMainThread]) { \
+block(); \
+} else { \
+dispatch_async(dispatch_get_main_queue(), block); \
 }
 
 #ifdef DEBUG
@@ -143,7 +143,7 @@ dispatch_async(dispatch_get_main_queue(), block);\
     return item;
 }
 
-+ (BOOL)refreshLabelWithContainerLayer:(CALayer *)containerLayer refreshEventBlock:(void(^)(void))refreshEventBlock
++ (BOOL)refreshLabelWithContainerLayer:(CALayer *)containerLayer refreshEventBlock:(void (^)(void))refreshEventBlock
 {
     CALayer *superLayer = containerLayer.superlayer;
     if (superLayer && [superLayer.delegate isKindOfClass:[YYLabel class]]) {
@@ -156,6 +156,7 @@ dispatch_async(dispatch_get_main_queue(), block);\
     }
     return NO;
 }
+
 + (ZBImageTextItem *)imageTemplateWithData:(NSDictionary *)data
 {
     NSAssert([NSThread isMainThread], @"must be called on the main thread");
@@ -206,7 +207,8 @@ dispatch_async(dispatch_get_main_queue(), block);\
                 imageV.layer.borderWidth = borderWidth;
             }
             if (borderRadius > 0) {
-                [imageV zb_setCornerRadius:borderRadius];
+                imageV.layer.masksToBounds = YES;
+                imageV.layer.cornerRadius = borderRadius;
             }
         }
         
@@ -294,7 +296,7 @@ dispatch_async(dispatch_get_main_queue(), block);\
     YYTextAction tapAction = data[@"tap"] ? : nil;
     
     CGSize containerSize = [text sizeWithAttributes:@{
-                                                      NSFontAttributeName : font
+                                                      NSFontAttributeName: font
                                                       }];
     
     containerSize = CGSizeMake(containerSize.width + borderMargin.left + borderMargin.right, containerSize.height +  borderMargin.top + borderMargin.bottom);
