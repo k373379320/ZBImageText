@@ -11,8 +11,7 @@
 
 @class ZBImageTextItemBackground, ZBImageTextItemBorder, ZBImageTextItemDecoration;
 
-typedef void(^YYTextAction)(UIView *containerView, NSAttributedString *text, NSRange range, CGRect rect);
-
+typedef void (^YYTextAction)(UIView *containerView, NSAttributedString *text, NSRange range, CGRect rect);
 
 @interface ZBImageText : NSObject
 
@@ -50,6 +49,8 @@ typedef void(^YYTextAction)(UIView *containerView, NSAttributedString *text, NSR
 
 @property (nonatomic, copy) ZBImageTextItemImage * (^ height)(CGFloat height);
 
+@property (nonatomic, copy) ZBImageTextItemImage * (^ size)(CGSize size);
+
 @property (nonatomic, copy) ZBImageTextItemImage * (^ offset)(CGFloat offset);
 
 @property (nonatomic, copy) ZBImageTextItemImage * (^ border)(ZBImageTextItemBorder *border);
@@ -62,8 +63,9 @@ typedef void(^YYTextAction)(UIView *containerView, NSAttributedString *text, NSR
 
 @interface ZBImageTextItemBackground : ZBImageText
 
-+ (instancetype)bgWithImage:(UIImage *)image
-                     margin:(UIEdgeInsets)margin;
++ (instancetype)bgWithImage:(UIImage *)image margin:(UIEdgeInsets)margin;
+
++ (instancetype)bgWithImage:(UIImage *)image margin:(UIEdgeInsets)margin stretchable:(BOOL)stretchable;
 
 @end
 
@@ -71,14 +73,9 @@ typedef void(^YYTextAction)(UIView *containerView, NSAttributedString *text, NSR
 
 + (instancetype)borderWithRadius:(CGFloat)radius;
 
-+ (instancetype)borderWithColor:(UIColor *)color
-                          width:(CGFloat)width
-                         radius:(CGFloat)radius;
++ (instancetype)borderWithColor:(UIColor *)color width:(CGFloat)width radius:(CGFloat)radius;
 
-+ (instancetype)borderWithColor:(UIColor *)color
-                          width:(CGFloat)width
-                         radius:(CGFloat)radius
-                         margin:(UIEdgeInsets)margin;
++ (instancetype)borderWithColor:(UIColor *)color width:(CGFloat)width radius:(CGFloat)radius margin:(UIEdgeInsets)margin;
 
 @end
 
@@ -92,14 +89,11 @@ typedef void(^YYTextAction)(UIView *containerView, NSAttributedString *text, NSR
 /**
  删除线,自定义高度,颜色,
  */
-+ (instancetype)decorationWithHeight:(CGFloat)height
-                               color:(UIColor *)color;
++ (instancetype)decorationWithHeight:(CGFloat)height color:(UIColor *)color;
 
 /**
  删除线,自定义高度,颜色,偏移位置
  */
-+ (instancetype)decorationWithHeight:(CGFloat)height
-                               color:(UIColor *)color
-                              offset:(CGFloat)offset;
++ (instancetype)decorationWithHeight:(CGFloat)height color:(UIColor *)color offset:(CGFloat)offset;
 
 @end

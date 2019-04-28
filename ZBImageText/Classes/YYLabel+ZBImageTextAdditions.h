@@ -13,7 +13,9 @@
 @interface YYLabel (ZBImageTextAdditions)
 
 - (void)zb_makeContexts:(void(NS_NOESCAPE ^)(ZBImageTextMaker *make))block;
+- (void)zb_makeContexts:(void(NS_NOESCAPE ^)(ZBImageTextMaker *make))block globalConfig:(NSDictionary *)globalConfig;
 
 + (NSAttributedString *)zb_attributedStringWithContexts:(void(NS_NOESCAPE ^)(ZBImageTextMaker *make))block;
++ (NSAttributedString *)zb_attributedStringWithContexts:(void(NS_NOESCAPE ^)(ZBImageTextMaker *make))block globalConfig:(NSDictionary *)globalConfig;
 
 @end

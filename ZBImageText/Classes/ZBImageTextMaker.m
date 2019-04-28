@@ -12,6 +12,9 @@
 
 @interface ZBImageTextMaker ()
 @property (nonatomic, strong) NSMutableArray *items;
+
+@property (nonatomic, strong) NSDictionary *globalConfig;
+
 @end
 @implementation ZBImageTextMaker
 
@@ -23,15 +26,26 @@
     }
     return self;
 }
+
 - (NSAttributedString *)install
 {
     NSMutableArray *items = [NSMutableArray arrayWithCapacity:self.items.count];
     for (ZBImageText *it in self.items) {
         if (it.info) {
+            if (self.globalConfig) {
+                [it.info addEntriesFromDictionary:self.globalConfig];
+            }
             [items addObject:[it.info copy]];
         }
     }
     return  [ZBImageTextEngine attributedStringFromData:items];
+}
+
+- (void)setupGlobalConfig:(NSDictionary *)config
+{
+    if (config) {
+        self.globalConfig = [config copy];
+    }
 }
 
 - (void (^)(CGFloat width))space

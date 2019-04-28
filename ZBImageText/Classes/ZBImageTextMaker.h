@@ -23,4 +23,7 @@ typedef void(^YYTextAction)(UIView *containerView, NSAttributedString *text, NSR
 - (ZBImageTextItemText * (^)(NSString *text))text;
 
 - (NSAttributedString *)install;
+
+- (void)setupGlobalConfig:(NSDictionary *)config;
+
 @end

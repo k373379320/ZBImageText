@@ -200,7 +200,7 @@ dispatch_async(dispatch_get_main_queue(), block); \
         
         if (border) {
             UIColor *borderColor = border[@"color"] ? border[@"color"] : [UIColor blackColor];
-            CGFloat borderWidth = [border zb_safeFloatValueForKey:@"width" defaultValue:0.5];
+            CGFloat borderWidth = [border zb_safeFloatValueForKey:@"width" defaultValue:0];
             CGFloat borderRadius = [border zb_safeFloatValueForKey:@"radius" defaultValue:0];
             if (borderWidth > 0) {
                 imageV.layer.borderColor = borderColor.CGColor;

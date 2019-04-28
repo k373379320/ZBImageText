@@ -137,6 +137,15 @@
     };
 }
 
+- (ZBImageTextItemImage * (^)(CGSize size))size
+{
+    return ^ZBImageTextItemImage *(CGSize size) {
+        self.info[@"width"] = @(size.width);
+        self.info[@"height"] = @(size.height);
+        return self;
+    };
+}
+
 - (ZBImageTextItemImage * (^)(CGFloat offset))offset
 {
     return ^ZBImageTextItemImage * (CGFloat offset) {
@@ -181,12 +190,18 @@
 
 + (instancetype)bgWithImage:(UIImage *)image margin:(UIEdgeInsets)margin
 {
+    return [self bgWithImage:image margin:margin stretchable:YES];
+}
+
++ (instancetype)bgWithImage:(UIImage *)image margin:(UIEdgeInsets)margin stretchable:(BOOL)stretchable
+{
     if (!image) {
         return nil;
     }
     ZBImageTextItemBackground *bg = [[ZBImageTextItemBackground alloc] init];
     bg.info[@"margin"] = [NSValue valueWithUIEdgeInsets:margin];
     bg.info[@"image"] = image;
+    bg.info[@"stretchable"] = @(stretchable);
     return bg;
 }
 
@@ -207,10 +222,6 @@
 
 + (instancetype)borderWithColor:(UIColor *)color width:(CGFloat)width radius:(CGFloat)radius margin:(UIEdgeInsets)margin
 {
-    if (width <= 0) {
-        return nil;
-    }
-    
     ZBImageTextItemBorder *border = [[ZBImageTextItemBorder alloc] init];
     border.info[@"margin"] = [NSValue valueWithUIEdgeInsets:margin];
     if (color) {
